@@ -39,3 +39,5 @@ Estrutura base do aplicativo inicializada em **Flutter** (Dart), contendo:
 *   Configuração do tema global (`theme.dart`) com a paleta da marca.
 *   Módulo de navegação base com tela de Splash e Home.
 *   Repositório e diretório de *assets* configurados.
+
+https://www.figma.com/design/4vy0H4TBJ4kVD7B478flmt/CP1?node-id=0-1&p=f&t=aQ8le8RSQI2v8tBi-0
