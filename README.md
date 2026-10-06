@@ -103,7 +103,9 @@ erDiagram
     restaurants |o--o{ coupons : "exclusivo de"
 ```
 
-**Recriar o banco** em um projeto Supabase novo: *SQL Editor* → rode `supabase/schema.sql` e depois `supabase/seed.sql`.
+O banco do grupo já está no ar (`https://vafmfwnszuvwyejgnqsm.supabase.co`) com todos os dados: 5 apps, 13 restaurantes, 71 pratos, 264 preços e 12 cupons. Para ter acesso ao painel, peça um convite ao Ryan.
+
+**Recriar o banco** em um projeto Supabase novo: *SQL Editor* → rode `supabase/schema.sql` e depois `supabase/seed.sql`. Em seguida, troque a URL e a chave em `lib/core/config/supabase_config.dart`.
 Se mudar os dados, edite `assets/data/cheapeats_mock.json` e gere o seed de novo:
 
 ```bash

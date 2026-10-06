@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/app_services.dart';
 import '../core/utils/formatters.dart';
+import '../data/models/delivery_platform.dart';
 import '../data/models/food_category.dart';
 import '../data/models/restaurant.dart';
 import '../ui/theme.dart';
@@ -100,10 +101,10 @@ class RestaurantCard extends StatelessWidget {
                       const SizedBox(height: 8),
                       Row(
                         children: [
-                          for (final info in restaurant.platforms) ...[
-                            PlatformDot(platform: catalog.platform(info.platformId), size: 12),
-                            const SizedBox(width: 2),
-                          ],
+                          // Bolinhas dos apps sobrepostas (como avatares) para caber o texto.
+                          _StackedDots(
+                            platforms: [for (final info in restaurant.platforms) catalog.platform(info.platformId)],
+                          ),
                           const SizedBox(width: 6),
                           Expanded(
                             child: onlyOne
@@ -148,6 +149,32 @@ class RestaurantCard extends StatelessWidget {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class _StackedDots extends StatelessWidget {
+  final List<DeliveryPlatform> platforms;
+  static const double _size = 12;
+  static const double _step = 8; // quanto cada bolinha avança sobre a anterior
+
+  const _StackedDots({required this.platforms});
+
+  @override
+  Widget build(BuildContext context) {
+    if (platforms.isEmpty) return const SizedBox.shrink();
+    return Tooltip(
+      message: platforms.map((p) => p.name).join(', '),
+      child: SizedBox(
+        width: _size + (platforms.length - 1) * _step,
+        height: _size,
+        child: Stack(
+          children: [
+            for (var i = 0; i < platforms.length; i++)
+              Positioned(left: i * _step, child: PlatformDot(platform: platforms[i], size: _size)),
+          ],
         ),
       ),
     );

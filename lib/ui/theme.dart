@@ -212,6 +212,7 @@ class AppTheme {
         selectedColor: AppColors.orangeSoft,
         side: const BorderSide(color: AppColors.strokeGrey),
         labelStyle: AppText.caption.copyWith(color: AppColors.textBlack),
+        iconTheme: const IconThemeData(color: AppColors.orange, size: 16),
         shape: const StadiumBorder(),
         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       ),

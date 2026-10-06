@@ -1,5 +1,6 @@
 import 'package:cheapeats_app/core/app_services.dart';
 import 'package:cheapeats_app/core/config/map_config.dart';
+import 'package:cheapeats_app/core/config/supabase_config.dart';
 import 'package:cheapeats_app/core/routes/app_routes.dart';
 import 'package:cheapeats_app/main.dart';
 import 'package:cheapeats_app/screens/map_screen.dart';
@@ -39,6 +40,7 @@ void main() {
     // e os mapas aparecem sem os blocos de fundo.
     GoogleFonts.config.allowRuntimeFetching = false;
     MapConfig.tilesEnabled = false;
+    SupabaseConfig.forceOffline = true; // usa os dados locais, sem rede
   });
 
   testWidgets('fluxo principal: splash → login → home → restaurante → comparar', (tester) async {
