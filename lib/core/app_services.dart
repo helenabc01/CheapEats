@@ -24,6 +24,7 @@ class AppServices {
   static Catalog? _catalog;
   static DataSource _dataSource = DataSource.local;
   static String? _fallbackReason;
+  static bool _supabaseStarted = false;
 
   static final session = SessionController();
   static final address = AddressController();
@@ -48,9 +49,12 @@ class AppServices {
   /// Inicializa o Supabase (se houver URL e chave). Nunca lança erro:
   /// se falhar, o app segue com os dados locais.
   static Future<void> initSupabase() async {
-    if (!SupabaseConfig.isConfigured || Supabase.instance.isInitialized) return;
+    // Não usar `Supabase.instance` aqui: antes do initialize ele dispara um
+    // assert (modo debug) e a splash fica travada.
+    if (!SupabaseConfig.isConfigured || _supabaseStarted) return;
     try {
       await Supabase.initialize(url: SupabaseConfig.url, publishableKey: SupabaseConfig.publishableKey);
+      _supabaseStarted = true;
     } catch (error) {
       debugPrint('[CheapEats] Falha ao iniciar o Supabase: $error');
     }
