@@ -1,11 +1,11 @@
 {
-    "name": "cheapeats_app",
-    "short_name": "cheapeats_app",
+    "name": "CheapEats",
+    "short_name": "CheapEats",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FD6737",
+    "description": "Compare o preço do mesmo prato no iFood, 99Food e Keeta.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

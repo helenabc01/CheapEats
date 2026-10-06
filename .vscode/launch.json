@@ -1,0 +1,28 @@
+{
+  // Configurações de execução do CheapEats no VS Code (aba "Executar e depurar").
+  // Por padrão o app tenta o Supabase e, se não conseguir, usa os dados locais.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CheapEats (Chrome)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "deviceId": "chrome"
+    },
+    {
+      "name": "CheapEats (Chrome, só dados locais)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "deviceId": "chrome",
+      "toolArgs": ["--dart-define=SUPABASE_URL="]
+    },
+    {
+      "name": "CheapEats (Android / emulador)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    }
+  ]
+}
