@@ -1,0 +1,3462 @@
+{
+  "_info": "Dados SIMULADOS do CheapEats (CP5). Fonte única: o seed do Supabase é gerado a partir deste arquivo (tool/gerar_seed_sql.dart).",
+  "platforms": [
+    {
+      "id": "ifood",
+      "name": "iFood",
+      "color": "#EA1D2C",
+      "on_color": "#FFFFFF",
+      "web_url": "https://www.ifood.com.br",
+      "service_fee": 0.99,
+      "sort_order": 1
+    },
+    {
+      "id": "99food",
+      "name": "99Food",
+      "color": "#FFD100",
+      "on_color": "#1A2022",
+      "web_url": "https://99app.com",
+      "service_fee": 0.0,
+      "sort_order": 2
+    },
+    {
+      "id": "keeta",
+      "name": "Keeta",
+      "color": "#1A2022",
+      "on_color": "#FFD43B",
+      "web_url": "https://www.keeta.com.br",
+      "service_fee": 0.99,
+      "sort_order": 3
+    },
+    {
+      "id": "rappi",
+      "name": "Rappi",
+      "color": "#FF441F",
+      "on_color": "#FFFFFF",
+      "web_url": "https://www.rappi.com.br",
+      "service_fee": 1.49,
+      "sort_order": 4
+    },
+    {
+      "id": "aiqfome",
+      "name": "Aiqfome",
+      "color": "#7B1FA2",
+      "on_color": "#FFFFFF",
+      "web_url": "https://aiqfome.com",
+      "service_fee": 0.0,
+      "sort_order": 5
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "brasa-pao",
+      "name": "Brasa & Pão Hamburgueria",
+      "category": "lanches",
+      "description": "Smash burgers na chapa, pão brioche da casa e batata rústica.",
+      "neighborhood": "Vila Mariana",
+      "distance_km": 1.2,
+      "rating": 4.8,
+      "review_count": 2140,
+      "price_level": 2,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#3E2723",
+      "latitude": -23.574298,
+      "longitude": -46.649378
+    },
+    {
+      "id": "bella-napoli",
+      "name": "Pizzaria Bella Napoli",
+      "category": "pizza",
+      "description": "Pizza de longa fermentação assada no forno a lenha.",
+      "neighborhood": "Aclimação",
+      "distance_km": 2.4,
+      "rating": 4.7,
+      "review_count": 3410,
+      "price_level": 2,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#B71C1C",
+      "latitude": -23.573273,
+      "longitude": -46.632083
+    },
+    {
+      "id": "sushi-kenzo",
+      "name": "Sushi Kenzo",
+      "category": "japonesa",
+      "description": "Combinados com peixe fresco do dia e temakis generosos.",
+      "neighborhood": "Bela Vista",
+      "distance_km": 1.8,
+      "rating": 4.9,
+      "review_count": 1260,
+      "price_level": 3,
+      "is_open": false,
+      "opens_at": "18:00",
+      "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#263238",
+      "latitude": -23.55163,
+      "longitude": -46.642061
+    },
+    {
+      "id": "poke-haus",
+      "name": "Poke Haus",
+      "category": "saudavel",
+      "description": "Pokes havaianos montados na hora, com bases leves e proteínas frescas.",
+      "neighborhood": "Pinheiros",
+      "distance_km": 3.1,
+      "rating": 4.6,
+      "review_count": 870,
+      "price_level": 2,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#00695C",
+      "latitude": -23.566543,
+      "longitude": -46.683665
+    },
+    {
+      "id": "tia-lu",
+      "name": "Tia Lu Comida Caseira",
+      "category": "brasileira",
+      "description": "PF de vó: arroz soltinho, feijão temperado e mistura do dia.",
+      "neighborhood": "Vila Mariana",
+      "distance_km": 0.8,
+      "rating": 4.7,
+      "review_count": 5620,
+      "price_level": 1,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1626379907504-327b925f4b79?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#E65100",
+      "latitude": -23.570366,
+      "longitude": -46.64948
+    },
+    {
+      "id": "habibi",
+      "name": "Habibi Esfiharia",
+      "category": "arabe",
+      "description": "Esfihas abertas assadas na hora e pratos árabes tradicionais.",
+      "neighborhood": "Paraíso",
+      "distance_km": 1.5,
+      "rating": 4.5,
+      "review_count": 2930,
+      "price_level": 1,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1767114915974-3481fa23cbb0?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#4E342E",
+      "latitude": -23.573692,
+      "longitude": -46.643005
+    },
+    {
+      "id": "taco-loco",
+      "name": "Taco Loco",
+      "category": "mexicana",
+      "description": "Street food mexicana com tortillas de milho feitas na casa.",
+      "neighborhood": "Pinheiros",
+      "distance_km": 3.6,
+      "rating": 4.4,
+      "review_count": 640,
+      "price_level": 2,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#33691E",
+      "latitude": -23.561262,
+      "longitude": -46.688547
+    },
+    {
+      "id": "mestre-acai",
+      "name": "Mestre do Açaí",
+      "category": "acai",
+      "description": "Açaí cremoso do Pará com mais de 20 complementos.",
+      "neighborhood": "Liberdade",
+      "distance_km": 1.1,
+      "rating": 4.8,
+      "review_count": 4120,
+      "price_level": 1,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1627308594190-a057cd4bfac8?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#4A148C",
+      "latitude": -23.561525,
+      "longitude": -46.642987
+    },
+    {
+      "id": "frango-crocante",
+      "name": "Frango Crocante Co.",
+      "category": "lanches",
+      "description": "Frango empanado estilo sulista, crocante por fora e suculento por dentro.",
+      "neighborhood": "Bela Vista",
+      "distance_km": 2.0,
+      "rating": 4.3,
+      "review_count": 1930,
+      "price_level": 2,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1585703900468-13c7a978ad86?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#F57F17",
+      "latitude": -23.547103,
+      "longitude": -46.646696
+    },
+    {
+      "id": "cantina-nonna",
+      "name": "Cantina da Nonna",
+      "category": "italiana",
+      "description": "Massas frescas e molhos de receita de família no coração do Bixiga.",
+      "neighborhood": "Bixiga",
+      "distance_km": 2.7,
+      "rating": 4.8,
+      "review_count": 2210,
+      "price_level": 3,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1760390952710-b0e010ec4e50?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#1B5E20",
+      "latitude": -23.550094,
+      "longitude": -46.631725
+    },
+    {
+      "id": "verde-bowl",
+      "name": "Verde Bowl",
+      "category": "saudavel",
+      "description": "Saladas, bowls e wraps com ingredientes orgânicos.",
+      "neighborhood": "Paulista",
+      "distance_km": 0.9,
+      "rating": 4.6,
+      "review_count": 1140,
+      "price_level": 2,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1602881917445-0b1ba001addf?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#2E7D32",
+      "latitude": -23.56003,
+      "longitude": -46.661039
+    },
+    {
+      "id": "doce-brigadeiro",
+      "name": "Ateliê Doce Brigadeiro",
+      "category": "doces",
+      "description": "Brigadeiros gourmet, brownies e bolos de pote artesanais.",
+      "neighborhood": "Aclimação",
+      "distance_km": 2.2,
+      "rating": 4.9,
+      "review_count": 780,
+      "price_level": 2,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1636743715220-d8f8dd900b87?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#5D4037",
+      "latitude": -23.567555,
+      "longitude": -46.632167
+    },
+    {
+      "id": "padaria-estrela",
+      "name": "Padaria Estrela da Vila",
+      "category": "padaria",
+      "description": "Padaria de bairro com pão na chapa, salgados e café passado na hora.",
+      "neighborhood": "Vila Mariana",
+      "distance_km": 0.6,
+      "rating": 4.5,
+      "review_count": 3020,
+      "price_level": 1,
+      "is_open": true,
+      "opens_at": null,
+      "image_url": "https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?auto=format&fit=crop&w=800&q=70",
+      "brand_color": "#795548",
+      "latitude": -23.569506,
+      "longitude": -46.653912
+    }
+  ],
+  "restaurant_platforms": [
+    {
+      "restaurant_id": "brasa-pao",
+      "platform_id": "ifood",
+      "delivery_fee": 5.99,
+      "delivery_time_min": 30,
+      "delivery_time_max": 40,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "brasa-pao",
+      "platform_id": "99food",
+      "delivery_fee": 3.99,
+      "delivery_time_min": 35,
+      "delivery_time_max": 45,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "brasa-pao",
+      "platform_id": "keeta",
+      "delivery_fee": 2.49,
+      "delivery_time_min": 30,
+      "delivery_time_max": 45,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "brasa-pao",
+      "platform_id": "rappi",
+      "delivery_fee": 6.99,
+      "delivery_time_min": 30,
+      "delivery_time_max": 45,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "bella-napoli",
+      "platform_id": "ifood",
+      "delivery_fee": 0.0,
+      "delivery_time_min": 40,
+      "delivery_time_max": 55,
+      "min_order": 40.0
+    },
+    {
+      "restaurant_id": "bella-napoli",
+      "platform_id": "99food",
+      "delivery_fee": 6.99,
+      "delivery_time_min": 45,
+      "delivery_time_max": 60,
+      "min_order": 40.0
+    },
+    {
+      "restaurant_id": "bella-napoli",
+      "platform_id": "keeta",
+      "delivery_fee": 8.99,
+      "delivery_time_min": 40,
+      "delivery_time_max": 55,
+      "min_order": 40.0
+    },
+    {
+      "restaurant_id": "bella-napoli",
+      "platform_id": "rappi",
+      "delivery_fee": 7.99,
+      "delivery_time_min": 45,
+      "delivery_time_max": 60,
+      "min_order": 40.0
+    },
+    {
+      "restaurant_id": "sushi-kenzo",
+      "platform_id": "ifood",
+      "delivery_fee": 7.99,
+      "delivery_time_min": 45,
+      "delivery_time_max": 60,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "sushi-kenzo",
+      "platform_id": "99food",
+      "delivery_fee": 5.99,
+      "delivery_time_min": 50,
+      "delivery_time_max": 65,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "sushi-kenzo",
+      "platform_id": "keeta",
+      "delivery_fee": 6.49,
+      "delivery_time_min": 45,
+      "delivery_time_max": 60,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "sushi-kenzo",
+      "platform_id": "rappi",
+      "delivery_fee": 4.99,
+      "delivery_time_min": 40,
+      "delivery_time_max": 55,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "poke-haus",
+      "platform_id": "ifood",
+      "delivery_fee": 5.99,
+      "delivery_time_min": 25,
+      "delivery_time_max": 35,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "poke-haus",
+      "platform_id": "99food",
+      "delivery_fee": 2.99,
+      "delivery_time_min": 30,
+      "delivery_time_max": 40,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "poke-haus",
+      "platform_id": "keeta",
+      "delivery_fee": 2.49,
+      "delivery_time_min": 25,
+      "delivery_time_max": 40,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "tia-lu",
+      "platform_id": "ifood",
+      "delivery_fee": 3.99,
+      "delivery_time_min": 20,
+      "delivery_time_max": 30,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "tia-lu",
+      "platform_id": "99food",
+      "delivery_fee": 1.99,
+      "delivery_time_min": 25,
+      "delivery_time_max": 35,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "tia-lu",
+      "platform_id": "rappi",
+      "delivery_fee": 2.99,
+      "delivery_time_min": 25,
+      "delivery_time_max": 40,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "tia-lu",
+      "platform_id": "aiqfome",
+      "delivery_fee": 2.99,
+      "delivery_time_min": 40,
+      "delivery_time_max": 55,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "habibi",
+      "platform_id": "ifood",
+      "delivery_fee": 4.99,
+      "delivery_time_min": 30,
+      "delivery_time_max": 40,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "habibi",
+      "platform_id": "99food",
+      "delivery_fee": 3.99,
+      "delivery_time_min": 35,
+      "delivery_time_max": 45,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "habibi",
+      "platform_id": "keeta",
+      "delivery_fee": 1.49,
+      "delivery_time_min": 30,
+      "delivery_time_max": 45,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "habibi",
+      "platform_id": "rappi",
+      "delivery_fee": 5.99,
+      "delivery_time_min": 30,
+      "delivery_time_max": 45,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "habibi",
+      "platform_id": "aiqfome",
+      "delivery_fee": 4.49,
+      "delivery_time_min": 40,
+      "delivery_time_max": 55,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "taco-loco",
+      "platform_id": "99food",
+      "delivery_fee": 4.99,
+      "delivery_time_min": 35,
+      "delivery_time_max": 50,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "taco-loco",
+      "platform_id": "keeta",
+      "delivery_fee": 3.49,
+      "delivery_time_min": 35,
+      "delivery_time_max": 50,
+      "min_order": 30.0
+    },
+    {
+      "restaurant_id": "mestre-acai",
+      "platform_id": "ifood",
+      "delivery_fee": 1.99,
+      "delivery_time_min": 20,
+      "delivery_time_max": 30,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "mestre-acai",
+      "platform_id": "99food",
+      "delivery_fee": 2.49,
+      "delivery_time_min": 25,
+      "delivery_time_max": 35,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "mestre-acai",
+      "platform_id": "keeta",
+      "delivery_fee": 0.99,
+      "delivery_time_min": 20,
+      "delivery_time_max": 35,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "mestre-acai",
+      "platform_id": "rappi",
+      "delivery_fee": 3.49,
+      "delivery_time_min": 20,
+      "delivery_time_max": 35,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "mestre-acai",
+      "platform_id": "aiqfome",
+      "delivery_fee": 4.99,
+      "delivery_time_min": 35,
+      "delivery_time_max": 50,
+      "min_order": 15.0
+    },
+    {
+      "restaurant_id": "frango-crocante",
+      "platform_id": "ifood",
+      "delivery_fee": 2.99,
+      "delivery_time_min": 30,
+      "delivery_time_max": 40,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "frango-crocante",
+      "platform_id": "99food",
+      "delivery_fee": 5.99,
+      "delivery_time_min": 35,
+      "delivery_time_max": 50,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "frango-crocante",
+      "platform_id": "keeta",
+      "delivery_fee": 6.49,
+      "delivery_time_min": 35,
+      "delivery_time_max": 50,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "frango-crocante",
+      "platform_id": "rappi",
+      "delivery_fee": 4.99,
+      "delivery_time_min": 30,
+      "delivery_time_max": 45,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "frango-crocante",
+      "platform_id": "aiqfome",
+      "delivery_fee": 5.99,
+      "delivery_time_min": 40,
+      "delivery_time_max": 55,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "cantina-nonna",
+      "platform_id": "ifood",
+      "delivery_fee": 4.99,
+      "delivery_time_min": 40,
+      "delivery_time_max": 55,
+      "min_order": 40.0
+    },
+    {
+      "restaurant_id": "cantina-nonna",
+      "platform_id": "99food",
+      "delivery_fee": 7.99,
+      "delivery_time_min": 45,
+      "delivery_time_max": 60,
+      "min_order": 40.0
+    },
+    {
+      "restaurant_id": "cantina-nonna",
+      "platform_id": "keeta",
+      "delivery_fee": 9.9,
+      "delivery_time_min": 45,
+      "delivery_time_max": 60,
+      "min_order": 40.0
+    },
+    {
+      "restaurant_id": "cantina-nonna",
+      "platform_id": "rappi",
+      "delivery_fee": 6.99,
+      "delivery_time_min": 40,
+      "delivery_time_max": 55,
+      "min_order": 40.0
+    },
+    {
+      "restaurant_id": "verde-bowl",
+      "platform_id": "ifood",
+      "delivery_fee": 3.99,
+      "delivery_time_min": 20,
+      "delivery_time_max": 30,
+      "min_order": 25.0
+    },
+    {
+      "restaurant_id": "verde-bowl",
+      "platform_id": "keeta",
+      "delivery_fee": 1.9,
+      "delivery_time_min": 25,
+      "delivery_time_max": 35,
+      "min_order": 25.0
+    },
+    {
+      "restaurant_id": "doce-brigadeiro",
+      "platform_id": "ifood",
+      "delivery_fee": 5.99,
+      "delivery_time_min": 30,
+      "delivery_time_max": 45,
+      "min_order": 20.0
+    },
+    {
+      "restaurant_id": "padaria-estrela",
+      "platform_id": "ifood",
+      "delivery_fee": 0.0,
+      "delivery_time_min": 15,
+      "delivery_time_max": 25,
+      "min_order": 10.0
+    },
+    {
+      "restaurant_id": "padaria-estrela",
+      "platform_id": "99food",
+      "delivery_fee": 1.99,
+      "delivery_time_min": 20,
+      "delivery_time_max": 30,
+      "min_order": 10.0
+    },
+    {
+      "restaurant_id": "padaria-estrela",
+      "platform_id": "keeta",
+      "delivery_fee": 1.99,
+      "delivery_time_min": 20,
+      "delivery_time_max": 30,
+      "min_order": 10.0
+    },
+    {
+      "restaurant_id": "padaria-estrela",
+      "platform_id": "rappi",
+      "delivery_fee": 2.99,
+      "delivery_time_min": 10,
+      "delivery_time_max": 20,
+      "min_order": 10.0
+    },
+    {
+      "restaurant_id": "padaria-estrela",
+      "platform_id": "aiqfome",
+      "delivery_fee": 3.49,
+      "delivery_time_min": 25,
+      "delivery_time_max": 40,
+      "min_order": 10.0
+    }
+  ],
+  "dishes": [
+    {
+      "id": "brasa-pao-smash-duplo",
+      "restaurant_id": "brasa-pao",
+      "name": "Smash Duplo",
+      "description": "Dois smash de 80g, cheddar inglês, cebola caramelizada e maionese da casa no brioche.",
+      "section": "Smash Burgers",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "brasa-pao-smash-bacon",
+      "restaurant_id": "brasa-pao",
+      "name": "Smash Bacon",
+      "description": "Smash de 80g, bacon crocante, cheddar e molho barbecue defumado.",
+      "section": "Smash Burgers",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 1
+    },
+    {
+      "id": "brasa-pao-brasa-classico",
+      "restaurant_id": "brasa-pao",
+      "name": "Brasa Clássico",
+      "description": "Burger de 180g, queijo prato, alface, tomate e maionese verde.",
+      "section": "Burgers da Casa",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "brasa-pao-combo-smash",
+      "restaurant_id": "brasa-pao",
+      "name": "Combo Smash + Batata + Refri",
+      "description": "Smash Duplo, batata rústica individual e refrigerante lata.",
+      "section": "Combos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 3
+    },
+    {
+      "id": "brasa-pao-batata-rustica",
+      "restaurant_id": "brasa-pao",
+      "name": "Batata Rústica 300g",
+      "description": "Batata com casca, alecrim e páprica defumada.",
+      "section": "Acompanhamentos",
+      "serves": 2,
+      "image_url": "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "brasa-pao-milkshake-ovomaltine",
+      "restaurant_id": "brasa-pao",
+      "name": "Milkshake de Ovomaltine 400ml",
+      "description": "Sorvete de baunilha batido com Ovomaltine crocante.",
+      "section": "Bebidas",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 5
+    },
+    {
+      "id": "brasa-pao-refri-lata",
+      "restaurant_id": "brasa-pao",
+      "name": "Refrigerante Lata 350ml",
+      "description": "Coca-Cola, Guaraná ou Sprite.",
+      "section": "Bebidas",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1544241907-f3f1f5ded15a?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 6
+    },
+    {
+      "id": "bella-napoli-margherita",
+      "restaurant_id": "bella-napoli",
+      "name": "Pizza Margherita (grande)",
+      "description": "Molho de tomate italiano, mussarela de búfala e manjericão. 8 fatias.",
+      "section": "Pizzas Tradicionais",
+      "serves": 3,
+      "image_url": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "bella-napoli-calabresa",
+      "restaurant_id": "bella-napoli",
+      "name": "Pizza Calabresa (grande)",
+      "description": "Calabresa artesanal, cebola roxa e azeitonas pretas. 8 fatias.",
+      "section": "Pizzas Tradicionais",
+      "serves": 3,
+      "image_url": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 1
+    },
+    {
+      "id": "bella-napoli-quatro-queijos",
+      "restaurant_id": "bella-napoli",
+      "name": "Pizza Quatro Queijos (grande)",
+      "description": "Mussarela, gorgonzola, parmesão e catupiry. 8 fatias.",
+      "section": "Pizzas Especiais",
+      "serves": 3,
+      "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "bella-napoli-portuguesa",
+      "restaurant_id": "bella-napoli",
+      "name": "Pizza Portuguesa (grande)",
+      "description": "Presunto, ovos, cebola, ervilha e azeitona. 8 fatias.",
+      "section": "Pizzas Especiais",
+      "serves": 3,
+      "image_url": "https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "bella-napoli-rucula",
+      "restaurant_id": "bella-napoli",
+      "name": "Pizza Rúcula com Tomate Seco (grande)",
+      "description": "Mussarela, rúcula fresca, tomate seco e parmesão.",
+      "section": "Pizzas Especiais",
+      "serves": 3,
+      "image_url": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "bella-napoli-brigadeiro-broto",
+      "restaurant_id": "bella-napoli",
+      "name": "Pizza de Brigadeiro (broto)",
+      "description": "Chocolate meio amargo e granulado belga. 4 fatias.",
+      "section": "Pizzas Doces",
+      "serves": 2,
+      "image_url": "https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 5
+    },
+    {
+      "id": "bella-napoli-refri-2l",
+      "restaurant_id": "bella-napoli",
+      "name": "Refrigerante 2L",
+      "description": "Coca-Cola ou Guaraná Antarctica.",
+      "section": "Bebidas",
+      "serves": 4,
+      "image_url": "https://images.unsplash.com/photo-1544241907-f3f1f5ded15a?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 6
+    },
+    {
+      "id": "sushi-kenzo-combo-20",
+      "restaurant_id": "sushi-kenzo",
+      "name": "Combinado 20 peças",
+      "description": "4 sashimis, 4 niguiris, 8 uramakis e 4 hossomakis.",
+      "section": "Combinados",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "sushi-kenzo-combo-40",
+      "restaurant_id": "sushi-kenzo",
+      "name": "Combinado 40 peças",
+      "description": "Seleção do chef para dividir. Ideal para 2 pessoas.",
+      "section": "Combinados",
+      "serves": 2,
+      "image_url": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 1
+    },
+    {
+      "id": "sushi-kenzo-temaki-salmao",
+      "restaurant_id": "sushi-kenzo",
+      "name": "Temaki de Salmão",
+      "description": "Salmão picado, cream cheese e cebolinha.",
+      "section": "Temakis",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "sushi-kenzo-hot-roll",
+      "restaurant_id": "sushi-kenzo",
+      "name": "Hot Roll (8 un.)",
+      "description": "Salmão e cream cheese empanados, com tarê.",
+      "section": "Hots",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "sushi-kenzo-uramaki-filadelfia",
+      "restaurant_id": "sushi-kenzo",
+      "name": "Uramaki Filadélfia (8 un.)",
+      "description": "Salmão, cream cheese e pepino.",
+      "section": "Uramakis",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "sushi-kenzo-sashimi-salmao",
+      "restaurant_id": "sushi-kenzo",
+      "name": "Sashimi de Salmão (10 fatias)",
+      "description": "Corte do dia, servido com shoyu e gengibre.",
+      "section": "Sashimis",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 5
+    },
+    {
+      "id": "poke-haus-poke-salmao",
+      "restaurant_id": "poke-haus",
+      "name": "Poke Salmão Clássico",
+      "description": "Arroz de sushi, salmão, manga, pepino, edamame e molho ponzu.",
+      "section": "Pokes",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1780805663515-dd81d984784f?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "poke-haus-poke-atum",
+      "restaurant_id": "poke-haus",
+      "name": "Poke Atum Spicy",
+      "description": "Atum, maionese de sriracha, cebola crispy e gergelim.",
+      "section": "Pokes",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 1
+    },
+    {
+      "id": "poke-haus-poke-vegano",
+      "restaurant_id": "poke-haus",
+      "name": "Poke Vegano de Tofu",
+      "description": "Tofu grelhado, quinoa, abacate, cenoura e shoyu cítrico.",
+      "section": "Pokes",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1597958792579-bd3517df6399?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "poke-haus-poke-monte",
+      "restaurant_id": "poke-haus",
+      "name": "Monte seu Poke (500g)",
+      "description": "Escolha base, 2 proteínas, 4 acompanhamentos e 1 molho.",
+      "section": "Pokes",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1556040220-4096d522378d?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "poke-haus-suco-verde",
+      "restaurant_id": "poke-haus",
+      "name": "Suco Verde 400ml",
+      "description": "Couve, abacaxi, hortelã e gengibre.",
+      "section": "Bebidas",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "tia-lu-pf-bife",
+      "restaurant_id": "tia-lu",
+      "name": "PF Bife Acebolado",
+      "description": "Arroz, feijão, bife acebolado, batata frita e salada.",
+      "section": "Pratos Feitos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1786052599586-344b949de861?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "tia-lu-pf-frango",
+      "restaurant_id": "tia-lu",
+      "name": "PF Frango Grelhado",
+      "description": "Arroz, feijão, filé de frango grelhado, farofa e salada.",
+      "section": "Pratos Feitos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1781332147287-191fcfbd52be?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 1
+    },
+    {
+      "id": "tia-lu-feijoada",
+      "restaurant_id": "tia-lu",
+      "name": "Feijoada Individual",
+      "description": "Feijoada completa com arroz, couve, farofa e laranja. Só aos sábados!",
+      "section": "Especiais",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1628521061262-19b5cdb7eee5?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "tia-lu-parmegiana",
+      "restaurant_id": "tia-lu",
+      "name": "Parmegiana de Frango",
+      "description": "Filé empanado, molho de tomate, mussarela gratinada, arroz e fritas.",
+      "section": "Pratos Feitos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1653681472495-0a62d97e37fb?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "tia-lu-strogonoff",
+      "restaurant_id": "tia-lu",
+      "name": "Strogonoff de Carne",
+      "description": "Com arroz branco e batata palha.",
+      "section": "Pratos Feitos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1696634226733-01d74af77bfc?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "tia-lu-pudim",
+      "restaurant_id": "tia-lu",
+      "name": "Pudim de Leite",
+      "description": "Fatia generosa com calda de caramelo.",
+      "section": "Sobremesas",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 5
+    },
+    {
+      "id": "habibi-esfiha-carne",
+      "restaurant_id": "habibi",
+      "name": "Esfiha de Carne",
+      "description": "Massa fina, carne temperada com limão e hortelã.",
+      "section": "Esfihas",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "habibi-esfiha-queijo",
+      "restaurant_id": "habibi",
+      "name": "Esfiha de Queijo",
+      "description": "Mussarela e orégano.",
+      "section": "Esfihas",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 1
+    },
+    {
+      "id": "habibi-kibe",
+      "restaurant_id": "habibi",
+      "name": "Kibe Frito",
+      "description": "Recheado com carne e cebola.",
+      "section": "Salgados",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "habibi-combo-10",
+      "restaurant_id": "habibi",
+      "name": "Combo 10 Esfihas",
+      "description": "5 de carne, 3 de queijo e 2 de calabresa.",
+      "section": "Combos",
+      "serves": 2,
+      "image_url": null,
+      "is_popular": true,
+      "sort_order": 3
+    },
+    {
+      "id": "habibi-beirute",
+      "restaurant_id": "habibi",
+      "name": "Beirute de Rosbife",
+      "description": "Pão sírio, rosbife, queijo, alface, tomate e molho de iogurte.",
+      "section": "Lanches",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "habibi-falafel",
+      "restaurant_id": "habibi",
+      "name": "Falafel com Homus",
+      "description": "6 bolinhos de grão-de-bico, homus, salada e pão sírio.",
+      "section": "Pratos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1768812910769-d037b90aee77?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 5
+    },
+    {
+      "id": "taco-loco-tacos-pastor",
+      "restaurant_id": "taco-loco",
+      "name": "Tacos al Pastor (3 un.)",
+      "description": "Porco marinado no achiote, abacaxi grelhado e coentro.",
+      "section": "Tacos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "taco-loco-burrito",
+      "restaurant_id": "taco-loco",
+      "name": "Burrito de Carne",
+      "description": "Carne desfiada, arroz, feijão, queijo e pico de gallo.",
+      "section": "Burritos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 1
+    },
+    {
+      "id": "taco-loco-nachos",
+      "restaurant_id": "taco-loco",
+      "name": "Nachos Supremos",
+      "description": "Tortilla chips, cheddar, guacamole, sour cream e jalapeño.",
+      "section": "Para dividir",
+      "serves": 2,
+      "image_url": "https://images.unsplash.com/photo-1542676303584-c8043a6c7618?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 2
+    },
+    {
+      "id": "taco-loco-quesadilla",
+      "restaurant_id": "taco-loco",
+      "name": "Quesadilla de Frango",
+      "description": "Tortilla de trigo, frango, queijo e pimentão.",
+      "section": "Tacos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1545093149-618ce3bcf49d?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "taco-loco-churros",
+      "restaurant_id": "taco-loco",
+      "name": "Churros com Doce de Leite",
+      "description": "6 mini churros com canela e açúcar.",
+      "section": "Sobremesas",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "mestre-acai-acai-300",
+      "restaurant_id": "mestre-acai",
+      "name": "Açaí 300ml",
+      "description": "Com 3 complementos à escolha.",
+      "section": "Açaís",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1627308594190-a057cd4bfac8?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 0
+    },
+    {
+      "id": "mestre-acai-acai-500",
+      "restaurant_id": "mestre-acai",
+      "name": "Açaí 500ml",
+      "description": "Com 4 complementos à escolha. O mais pedido!",
+      "section": "Açaís",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1676515841519-7bb498597c73?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 1
+    },
+    {
+      "id": "mestre-acai-acai-700",
+      "restaurant_id": "mestre-acai",
+      "name": "Açaí 700ml",
+      "description": "Com 5 complementos à escolha.",
+      "section": "Açaís",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1562166453-2783119c313a?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "mestre-acai-cupuacu-500",
+      "restaurant_id": "mestre-acai",
+      "name": "Creme de Cupuaçu 500ml",
+      "description": "Cremoso, com leite condensado e castanha.",
+      "section": "Cremes",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "mestre-acai-combo-casal",
+      "restaurant_id": "mestre-acai",
+      "name": "Combo Casal (2 × 500ml)",
+      "description": "Dois açaís de 500ml com 4 complementos cada.",
+      "section": "Combos",
+      "serves": 2,
+      "image_url": "https://images.unsplash.com/photo-1627308594190-a057cd4bfac8?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 4
+    },
+    {
+      "id": "frango-crocante-balde-12",
+      "restaurant_id": "frango-crocante",
+      "name": "Balde 12 Pedaços",
+      "description": "Sobrecoxa e coxa empanadas, com 2 molhos.",
+      "section": "Baldes",
+      "serves": 3,
+      "image_url": "https://images.unsplash.com/photo-1585703900468-13c7a978ad86?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "frango-crocante-sanduiche-crispy",
+      "restaurant_id": "frango-crocante",
+      "name": "Sanduíche Crispy",
+      "description": "Filé de frango empanado, coleslaw e picles no brioche.",
+      "section": "Sanduíches",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1779798451401-561b90281075?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 1
+    },
+    {
+      "id": "frango-crocante-tiras-10",
+      "restaurant_id": "frango-crocante",
+      "name": "Tiras de Frango (10 un.)",
+      "description": "Tiras crocantes com molho mostarda e mel.",
+      "section": "Para dividir",
+      "serves": 2,
+      "image_url": "https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "frango-crocante-combo-crispy",
+      "restaurant_id": "frango-crocante",
+      "name": "Combo Crispy + Batata + Refri",
+      "description": "Sanduíche Crispy, batata média e refrigerante lata.",
+      "section": "Combos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "frango-crocante-batata-media",
+      "restaurant_id": "frango-crocante",
+      "name": "Batata Frita Média",
+      "description": "Crocante, com sal e páprica.",
+      "section": "Acompanhamentos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "cantina-nonna-lasanha",
+      "restaurant_id": "cantina-nonna",
+      "name": "Lasanha à Bolonhesa",
+      "description": "Massa fresca, ragù de carne cozido por 6h e bechamel.",
+      "section": "Massas",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1709429790175-b02bb1b19207?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "cantina-nonna-nhoque",
+      "restaurant_id": "cantina-nonna",
+      "name": "Nhoque ao Sugo",
+      "description": "Nhoque de batata, molho de tomate fresco e manjericão.",
+      "section": "Massas",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 1
+    },
+    {
+      "id": "cantina-nonna-carbonara",
+      "restaurant_id": "cantina-nonna",
+      "name": "Spaghetti alla Carbonara",
+      "description": "Guanciale, gema, pecorino e pimenta-do-reino.",
+      "section": "Massas",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1579536568809-62154a3bee07?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 2
+    },
+    {
+      "id": "cantina-nonna-fettuccine",
+      "restaurant_id": "cantina-nonna",
+      "name": "Fettuccine Alfredo",
+      "description": "Molho cremoso de parmesão e manteiga.",
+      "section": "Massas",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "cantina-nonna-tiramisu",
+      "restaurant_id": "cantina-nonna",
+      "name": "Tiramisù",
+      "description": "Biscoito champagne, café e creme de mascarpone.",
+      "section": "Sobremesas",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "verde-bowl-caesar",
+      "restaurant_id": "verde-bowl",
+      "name": "Salada Caesar com Frango",
+      "description": "Alface romana, frango grelhado, croutons e molho caesar.",
+      "section": "Saladas",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1597958792579-bd3517df6399?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "verde-bowl-bowl-mediterraneo",
+      "restaurant_id": "verde-bowl",
+      "name": "Bowl Mediterrâneo",
+      "description": "Quinoa, grão-de-bico, pepino, tomate, feta e tahine.",
+      "section": "Bowls",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1602881917445-0b1ba001addf?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 1
+    },
+    {
+      "id": "verde-bowl-wrap-frango",
+      "restaurant_id": "verde-bowl",
+      "name": "Wrap Integral de Frango",
+      "description": "Frango desfiado, cream cheese, cenoura e rúcula.",
+      "section": "Wraps",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "verde-bowl-suco-detox",
+      "restaurant_id": "verde-bowl",
+      "name": "Suco Detox 300ml",
+      "description": "Limão, couve, gengibre e maçã.",
+      "section": "Bebidas",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "doce-brigadeiro-caixa-12",
+      "restaurant_id": "doce-brigadeiro",
+      "name": "Caixa com 12 Brigadeiros",
+      "description": "Sabores tradicional, ninho, pistache e café.",
+      "section": "Brigadeiros",
+      "serves": 3,
+      "image_url": "https://images.unsplash.com/photo-1702982852429-e0d0b27eb990?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "doce-brigadeiro-brownie",
+      "restaurant_id": "doce-brigadeiro",
+      "name": "Brownie Recheado",
+      "description": "Brownie de chocolate meio amargo recheado com doce de leite.",
+      "section": "Brownies",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1636743715220-d8f8dd900b87?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 1
+    },
+    {
+      "id": "doce-brigadeiro-bolo-pote",
+      "restaurant_id": "doce-brigadeiro",
+      "name": "Bolo de Pote Ninho com Nutella",
+      "description": "Massa de chocolate, creme de ninho e Nutella.",
+      "section": "Bolos",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1606313564573-104197cf8f91?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": "doce-brigadeiro-torta-holandesa",
+      "restaurant_id": "doce-brigadeiro",
+      "name": "Torta Holandesa (fatia)",
+      "description": "Base de biscoito, creme e ganache.",
+      "section": "Bolos",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "padaria-estrela-pao-chapa-cafe",
+      "restaurant_id": "padaria-estrela",
+      "name": "Pão na Chapa + Café com Leite",
+      "description": "Pão francês na manteiga e café com leite 300ml.",
+      "section": "Café da manhã",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1612366747681-e4ca6992b1e9?auto=format&fit=crop&w=600&q=70",
+      "is_popular": true,
+      "sort_order": 0
+    },
+    {
+      "id": "padaria-estrela-misto-quente",
+      "restaurant_id": "padaria-estrela",
+      "name": "Misto Quente",
+      "description": "Pão de forma, presunto e queijo prato na chapa.",
+      "section": "Lanches",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 1
+    },
+    {
+      "id": "padaria-estrela-pao-queijo",
+      "restaurant_id": "padaria-estrela",
+      "name": "Pão de Queijo (6 un.)",
+      "description": "Pão de queijo mineiro assado na hora.",
+      "section": "Salgados",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": true,
+      "sort_order": 2
+    },
+    {
+      "id": "padaria-estrela-croissant",
+      "restaurant_id": "padaria-estrela",
+      "name": "Croissant de Presunto e Queijo",
+      "description": "Massa folhada amanteigada.",
+      "section": "Salgados",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1721277000438-488066df7ac8?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": "padaria-estrela-cappuccino",
+      "restaurant_id": "padaria-estrela",
+      "name": "Cappuccino 300ml",
+      "description": "Café espresso, leite vaporizado e canela.",
+      "section": "Bebidas",
+      "serves": 1,
+      "image_url": "https://images.unsplash.com/photo-1687978975635-c20d06724c4b?auto=format&fit=crop&w=600&q=70",
+      "is_popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": "padaria-estrela-bolo-cenoura",
+      "restaurant_id": "padaria-estrela",
+      "name": "Bolo de Cenoura com Chocolate (fatia)",
+      "description": "Cobertura de brigadeiro mole.",
+      "section": "Doces",
+      "serves": 1,
+      "image_url": null,
+      "is_popular": false,
+      "sort_order": 5
+    }
+  ],
+  "dish_prices": [
+    {
+      "dish_id": "brasa-pao-smash-duplo",
+      "platform_id": "ifood",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-smash-duplo",
+      "platform_id": "99food",
+      "price": 34.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-smash-duplo",
+      "platform_id": "keeta",
+      "price": 33.9,
+      "original_price": 36.9,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-smash-duplo",
+      "platform_id": "rappi",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-smash-bacon",
+      "platform_id": "ifood",
+      "price": 41.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-smash-bacon",
+      "platform_id": "99food",
+      "price": 38.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-smash-bacon",
+      "platform_id": "keeta",
+      "price": 39.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-smash-bacon",
+      "platform_id": "rappi",
+      "price": 40.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-brasa-classico",
+      "platform_id": "ifood",
+      "price": 38.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-brasa-classico",
+      "platform_id": "99food",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-brasa-classico",
+      "platform_id": "keeta",
+      "price": 37.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-brasa-classico",
+      "platform_id": "rappi",
+      "price": 38.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-combo-smash",
+      "platform_id": "ifood",
+      "price": 52.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-combo-smash",
+      "platform_id": "99food",
+      "price": 49.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-combo-smash",
+      "platform_id": "keeta",
+      "price": 46.9,
+      "original_price": 52.9,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-combo-smash",
+      "platform_id": "rappi",
+      "price": 52.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-batata-rustica",
+      "platform_id": "ifood",
+      "price": 19.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-batata-rustica",
+      "platform_id": "99food",
+      "price": 18.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-batata-rustica",
+      "platform_id": "keeta",
+      "price": 19.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-batata-rustica",
+      "platform_id": "rappi",
+      "price": 19.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-milkshake-ovomaltine",
+      "platform_id": "ifood",
+      "price": 23.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-milkshake-ovomaltine",
+      "platform_id": "99food",
+      "price": 22.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-milkshake-ovomaltine",
+      "platform_id": "keeta",
+      "price": 23.9,
+      "original_price": null,
+      "available": false
+    },
+    {
+      "dish_id": "brasa-pao-milkshake-ovomaltine",
+      "platform_id": "rappi",
+      "price": 23.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-refri-lata",
+      "platform_id": "ifood",
+      "price": 6.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-refri-lata",
+      "platform_id": "99food",
+      "price": 6.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-refri-lata",
+      "platform_id": "keeta",
+      "price": 7.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "brasa-pao-refri-lata",
+      "platform_id": "rappi",
+      "price": 6.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-margherita",
+      "platform_id": "ifood",
+      "price": 69.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-margherita",
+      "platform_id": "99food",
+      "price": 66.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-margherita",
+      "platform_id": "keeta",
+      "price": 67.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-margherita",
+      "platform_id": "rappi",
+      "price": 68.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-calabresa",
+      "platform_id": "ifood",
+      "price": 64.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-calabresa",
+      "platform_id": "99food",
+      "price": 62.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-calabresa",
+      "platform_id": "keeta",
+      "price": 64.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-calabresa",
+      "platform_id": "rappi",
+      "price": 64.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-quatro-queijos",
+      "platform_id": "ifood",
+      "price": 74.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-quatro-queijos",
+      "platform_id": "99food",
+      "price": 72.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-quatro-queijos",
+      "platform_id": "keeta",
+      "price": 76.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-quatro-queijos",
+      "platform_id": "rappi",
+      "price": 74.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-portuguesa",
+      "platform_id": "ifood",
+      "price": 72.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-portuguesa",
+      "platform_id": "99food",
+      "price": 72.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-portuguesa",
+      "platform_id": "keeta",
+      "price": 71.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-portuguesa",
+      "platform_id": "rappi",
+      "price": 74.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-rucula",
+      "platform_id": "ifood",
+      "price": 76.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-rucula",
+      "platform_id": "99food",
+      "price": 74.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-rucula",
+      "platform_id": "rappi",
+      "price": 76.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-brigadeiro-broto",
+      "platform_id": "ifood",
+      "price": 39.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-brigadeiro-broto",
+      "platform_id": "99food",
+      "price": 37.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-brigadeiro-broto",
+      "platform_id": "keeta",
+      "price": 38.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-refri-2l",
+      "platform_id": "ifood",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-refri-2l",
+      "platform_id": "99food",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-refri-2l",
+      "platform_id": "keeta",
+      "price": 15.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "bella-napoli-refri-2l",
+      "platform_id": "rappi",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-combo-20",
+      "platform_id": "ifood",
+      "price": 92.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-combo-20",
+      "platform_id": "99food",
+      "price": 89.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-combo-20",
+      "platform_id": "keeta",
+      "price": 91.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-combo-20",
+      "platform_id": "rappi",
+      "price": 86.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-combo-40",
+      "platform_id": "ifood",
+      "price": 164.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-combo-40",
+      "platform_id": "99food",
+      "price": 159.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-combo-40",
+      "platform_id": "keeta",
+      "price": 149.9,
+      "original_price": 164.9,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-combo-40",
+      "platform_id": "rappi",
+      "price": 156.9,
+      "original_price": 164.9,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-temaki-salmao",
+      "platform_id": "ifood",
+      "price": 34.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-temaki-salmao",
+      "platform_id": "99food",
+      "price": 32.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-temaki-salmao",
+      "platform_id": "keeta",
+      "price": 33.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-temaki-salmao",
+      "platform_id": "rappi",
+      "price": 31.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-hot-roll",
+      "platform_id": "ifood",
+      "price": 31.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-hot-roll",
+      "platform_id": "99food",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-hot-roll",
+      "platform_id": "keeta",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-hot-roll",
+      "platform_id": "rappi",
+      "price": 28.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-uramaki-filadelfia",
+      "platform_id": "ifood",
+      "price": 33.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-uramaki-filadelfia",
+      "platform_id": "99food",
+      "price": 31.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-uramaki-filadelfia",
+      "platform_id": "keeta",
+      "price": 30.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-uramaki-filadelfia",
+      "platform_id": "rappi",
+      "price": 30.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-sashimi-salmao",
+      "platform_id": "ifood",
+      "price": 51.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-sashimi-salmao",
+      "platform_id": "99food",
+      "price": 49.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "sushi-kenzo-sashimi-salmao",
+      "platform_id": "keeta",
+      "price": 51.9,
+      "original_price": null,
+      "available": false
+    },
+    {
+      "dish_id": "sushi-kenzo-sashimi-salmao",
+      "platform_id": "rappi",
+      "price": 48.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-salmao",
+      "platform_id": "ifood",
+      "price": 51.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-salmao",
+      "platform_id": "99food",
+      "price": 49.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-salmao",
+      "platform_id": "keeta",
+      "price": 48.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-atum",
+      "platform_id": "ifood",
+      "price": 54.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-atum",
+      "platform_id": "99food",
+      "price": 52.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-atum",
+      "platform_id": "keeta",
+      "price": 53.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-vegano",
+      "platform_id": "ifood",
+      "price": 43.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-vegano",
+      "platform_id": "99food",
+      "price": 42.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-vegano",
+      "platform_id": "keeta",
+      "price": 42.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-monte",
+      "platform_id": "ifood",
+      "price": 57.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-monte",
+      "platform_id": "99food",
+      "price": 54.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-poke-monte",
+      "platform_id": "keeta",
+      "price": 56.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-suco-verde",
+      "platform_id": "ifood",
+      "price": 15.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-suco-verde",
+      "platform_id": "99food",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "poke-haus-suco-verde",
+      "platform_id": "keeta",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pf-bife",
+      "platform_id": "ifood",
+      "price": 33.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pf-bife",
+      "platform_id": "99food",
+      "price": 32.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pf-bife",
+      "platform_id": "rappi",
+      "price": 32.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pf-bife",
+      "platform_id": "aiqfome",
+      "price": 30.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pf-frango",
+      "platform_id": "ifood",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pf-frango",
+      "platform_id": "99food",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pf-frango",
+      "platform_id": "rappi",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pf-frango",
+      "platform_id": "aiqfome",
+      "price": 28.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-feijoada",
+      "platform_id": "ifood",
+      "price": 44.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-feijoada",
+      "platform_id": "99food",
+      "price": 44.9,
+      "original_price": null,
+      "available": false
+    },
+    {
+      "dish_id": "tia-lu-feijoada",
+      "platform_id": "rappi",
+      "price": 42.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-feijoada",
+      "platform_id": "aiqfome",
+      "price": 42.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-parmegiana",
+      "platform_id": "ifood",
+      "price": 40.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-parmegiana",
+      "platform_id": "99food",
+      "price": 39.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-parmegiana",
+      "platform_id": "rappi",
+      "price": 39.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-parmegiana",
+      "platform_id": "aiqfome",
+      "price": 37.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-strogonoff",
+      "platform_id": "ifood",
+      "price": 37.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-strogonoff",
+      "platform_id": "99food",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-strogonoff",
+      "platform_id": "rappi",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-strogonoff",
+      "platform_id": "aiqfome",
+      "price": 34.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pudim",
+      "platform_id": "ifood",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pudim",
+      "platform_id": "99food",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pudim",
+      "platform_id": "rappi",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "tia-lu-pudim",
+      "platform_id": "aiqfome",
+      "price": 12.9,
+      "original_price": null,
+      "available": false
+    },
+    {
+      "dish_id": "habibi-esfiha-carne",
+      "platform_id": "ifood",
+      "price": 7.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-carne",
+      "platform_id": "99food",
+      "price": 7.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-carne",
+      "platform_id": "keeta",
+      "price": 6.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-carne",
+      "platform_id": "rappi",
+      "price": 7.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-carne",
+      "platform_id": "aiqfome",
+      "price": 6.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-queijo",
+      "platform_id": "ifood",
+      "price": 7.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-queijo",
+      "platform_id": "99food",
+      "price": 7.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-queijo",
+      "platform_id": "keeta",
+      "price": 7.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-queijo",
+      "platform_id": "rappi",
+      "price": 7.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-esfiha-queijo",
+      "platform_id": "aiqfome",
+      "price": 6.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-kibe",
+      "platform_id": "ifood",
+      "price": 8.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-kibe",
+      "platform_id": "99food",
+      "price": 8.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-kibe",
+      "platform_id": "keeta",
+      "price": 8.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-kibe",
+      "platform_id": "rappi",
+      "price": 8.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-kibe",
+      "platform_id": "aiqfome",
+      "price": 7.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-combo-10",
+      "platform_id": "ifood",
+      "price": 62.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-combo-10",
+      "platform_id": "99food",
+      "price": 59.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-combo-10",
+      "platform_id": "keeta",
+      "price": 54.9,
+      "original_price": 59.9,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-combo-10",
+      "platform_id": "rappi",
+      "price": 62.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-combo-10",
+      "platform_id": "aiqfome",
+      "price": 57.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-beirute",
+      "platform_id": "ifood",
+      "price": 42.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-beirute",
+      "platform_id": "99food",
+      "price": 42.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-beirute",
+      "platform_id": "keeta",
+      "price": 43.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-beirute",
+      "platform_id": "rappi",
+      "price": 44.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-beirute",
+      "platform_id": "aiqfome",
+      "price": 41.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-falafel",
+      "platform_id": "ifood",
+      "price": 35.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-falafel",
+      "platform_id": "99food",
+      "price": 34.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-falafel",
+      "platform_id": "rappi",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "habibi-falafel",
+      "platform_id": "aiqfome",
+      "price": 33.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-tacos-pastor",
+      "platform_id": "99food",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-tacos-pastor",
+      "platform_id": "keeta",
+      "price": 34.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-burrito",
+      "platform_id": "99food",
+      "price": 38.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-burrito",
+      "platform_id": "keeta",
+      "price": 41.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-nachos",
+      "platform_id": "99food",
+      "price": 38.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-nachos",
+      "platform_id": "keeta",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-quesadilla",
+      "platform_id": "99food",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-quesadilla",
+      "platform_id": "keeta",
+      "price": 31.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-churros",
+      "platform_id": "99food",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "taco-loco-churros",
+      "platform_id": "keeta",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-300",
+      "platform_id": "ifood",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-300",
+      "platform_id": "99food",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-300",
+      "platform_id": "keeta",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-300",
+      "platform_id": "rappi",
+      "price": 15.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-300",
+      "platform_id": "aiqfome",
+      "price": 15.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-500",
+      "platform_id": "ifood",
+      "price": 22.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-500",
+      "platform_id": "99food",
+      "price": 22.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-500",
+      "platform_id": "keeta",
+      "price": 23.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-500",
+      "platform_id": "rappi",
+      "price": 21.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-500",
+      "platform_id": "aiqfome",
+      "price": 21.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-700",
+      "platform_id": "ifood",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-700",
+      "platform_id": "99food",
+      "price": 28.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-700",
+      "platform_id": "keeta",
+      "price": 26.9,
+      "original_price": 29.9,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-700",
+      "platform_id": "rappi",
+      "price": 27.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-acai-700",
+      "platform_id": "aiqfome",
+      "price": 27.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-cupuacu-500",
+      "platform_id": "ifood",
+      "price": 25.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-cupuacu-500",
+      "platform_id": "99food",
+      "price": 24.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-cupuacu-500",
+      "platform_id": "keeta",
+      "price": 25.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-cupuacu-500",
+      "platform_id": "rappi",
+      "price": 23.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-cupuacu-500",
+      "platform_id": "aiqfome",
+      "price": 23.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-combo-casal",
+      "platform_id": "ifood",
+      "price": 44.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-combo-casal",
+      "platform_id": "99food",
+      "price": 42.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-combo-casal",
+      "platform_id": "keeta",
+      "price": 43.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "mestre-acai-combo-casal",
+      "platform_id": "rappi",
+      "price": 41.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-balde-12",
+      "platform_id": "ifood",
+      "price": 69.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-balde-12",
+      "platform_id": "99food",
+      "price": 71.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-balde-12",
+      "platform_id": "keeta",
+      "price": 72.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-balde-12",
+      "platform_id": "rappi",
+      "price": 71.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-sanduiche-crispy",
+      "platform_id": "ifood",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-sanduiche-crispy",
+      "platform_id": "99food",
+      "price": 30.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-sanduiche-crispy",
+      "platform_id": "keeta",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-sanduiche-crispy",
+      "platform_id": "rappi",
+      "price": 30.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-sanduiche-crispy",
+      "platform_id": "aiqfome",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-tiras-10",
+      "platform_id": "ifood",
+      "price": 32.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-tiras-10",
+      "platform_id": "99food",
+      "price": 33.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-tiras-10",
+      "platform_id": "keeta",
+      "price": 32.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-tiras-10",
+      "platform_id": "rappi",
+      "price": 33.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-tiras-10",
+      "platform_id": "aiqfome",
+      "price": 32.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-combo-crispy",
+      "platform_id": "ifood",
+      "price": 44.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-combo-crispy",
+      "platform_id": "99food",
+      "price": 46.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-combo-crispy",
+      "platform_id": "keeta",
+      "price": 45.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-combo-crispy",
+      "platform_id": "rappi",
+      "price": 46.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-combo-crispy",
+      "platform_id": "aiqfome",
+      "price": 45.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-batata-media",
+      "platform_id": "ifood",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-batata-media",
+      "platform_id": "99food",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-batata-media",
+      "platform_id": "keeta",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-batata-media",
+      "platform_id": "rappi",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "frango-crocante-batata-media",
+      "platform_id": "aiqfome",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-lasanha",
+      "platform_id": "ifood",
+      "price": 56.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-lasanha",
+      "platform_id": "99food",
+      "price": 54.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-lasanha",
+      "platform_id": "keeta",
+      "price": 57.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-lasanha",
+      "platform_id": "rappi",
+      "price": 51.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-nhoque",
+      "platform_id": "ifood",
+      "price": 48.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-nhoque",
+      "platform_id": "99food",
+      "price": 46.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-nhoque",
+      "platform_id": "keeta",
+      "price": 47.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-nhoque",
+      "platform_id": "rappi",
+      "price": 44.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-carbonara",
+      "platform_id": "ifood",
+      "price": 54.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-carbonara",
+      "platform_id": "99food",
+      "price": 52.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-carbonara",
+      "platform_id": "keeta",
+      "price": 52.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-carbonara",
+      "platform_id": "rappi",
+      "price": 49.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-fettuccine",
+      "platform_id": "ifood",
+      "price": 51.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-fettuccine",
+      "platform_id": "99food",
+      "price": 49.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-fettuccine",
+      "platform_id": "rappi",
+      "price": 47.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-tiramisu",
+      "platform_id": "ifood",
+      "price": 25.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-tiramisu",
+      "platform_id": "99food",
+      "price": 24.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-tiramisu",
+      "platform_id": "keeta",
+      "price": 24.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "cantina-nonna-tiramisu",
+      "platform_id": "rappi",
+      "price": 23.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "verde-bowl-caesar",
+      "platform_id": "ifood",
+      "price": 37.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "verde-bowl-caesar",
+      "platform_id": "keeta",
+      "price": 36.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "verde-bowl-bowl-mediterraneo",
+      "platform_id": "ifood",
+      "price": 39.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "verde-bowl-bowl-mediterraneo",
+      "platform_id": "keeta",
+      "price": 39.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "verde-bowl-wrap-frango",
+      "platform_id": "ifood",
+      "price": 29.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "verde-bowl-wrap-frango",
+      "platform_id": "keeta",
+      "price": 31.99,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "verde-bowl-suco-detox",
+      "platform_id": "ifood",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "verde-bowl-suco-detox",
+      "platform_id": "keeta",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "doce-brigadeiro-caixa-12",
+      "platform_id": "ifood",
+      "price": 39.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "doce-brigadeiro-brownie",
+      "platform_id": "ifood",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "doce-brigadeiro-bolo-pote",
+      "platform_id": "ifood",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "doce-brigadeiro-torta-holandesa",
+      "platform_id": "ifood",
+      "price": 18.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-chapa-cafe",
+      "platform_id": "ifood",
+      "price": 13.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-chapa-cafe",
+      "platform_id": "99food",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-chapa-cafe",
+      "platform_id": "keeta",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-chapa-cafe",
+      "platform_id": "rappi",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-chapa-cafe",
+      "platform_id": "aiqfome",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-misto-quente",
+      "platform_id": "ifood",
+      "price": 17.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-misto-quente",
+      "platform_id": "99food",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-misto-quente",
+      "platform_id": "keeta",
+      "price": 16.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-misto-quente",
+      "platform_id": "rappi",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-misto-quente",
+      "platform_id": "aiqfome",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-queijo",
+      "platform_id": "ifood",
+      "price": 15.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-queijo",
+      "platform_id": "99food",
+      "price": 14.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-queijo",
+      "platform_id": "keeta",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-queijo",
+      "platform_id": "rappi",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-pao-queijo",
+      "platform_id": "aiqfome",
+      "price": 13.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-croissant",
+      "platform_id": "ifood",
+      "price": 16.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-croissant",
+      "platform_id": "99food",
+      "price": 15.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-croissant",
+      "platform_id": "keeta",
+      "price": 15.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-croissant",
+      "platform_id": "rappi",
+      "price": 15.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-croissant",
+      "platform_id": "aiqfome",
+      "price": 14.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-cappuccino",
+      "platform_id": "ifood",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-cappuccino",
+      "platform_id": "99food",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-cappuccino",
+      "platform_id": "keeta",
+      "price": 11.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-cappuccino",
+      "platform_id": "rappi",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-bolo-cenoura",
+      "platform_id": "ifood",
+      "price": 12.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-bolo-cenoura",
+      "platform_id": "99food",
+      "price": 11.5,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-bolo-cenoura",
+      "platform_id": "keeta",
+      "price": 10.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-bolo-cenoura",
+      "platform_id": "rappi",
+      "price": 11.9,
+      "original_price": null,
+      "available": true
+    },
+    {
+      "dish_id": "padaria-estrela-bolo-cenoura",
+      "platform_id": "aiqfome",
+      "price": 10.9,
+      "original_price": null,
+      "available": true
+    }
+  ],
+  "coupons": [
+    {
+      "id": "c-ifood10",
+      "platform_id": "ifood",
+      "restaurant_id": null,
+      "code": "IFOOD10",
+      "title": "R$ 10 OFF acima de R$ 45",
+      "description": "R$ 10 de desconto em pedidos acima de R$ 45 em restaurantes participantes.",
+      "type": "fixed",
+      "value": 10,
+      "max_discount": null,
+      "min_order": 45,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-napoli15",
+      "platform_id": "ifood",
+      "restaurant_id": "bella-napoli",
+      "code": "NAPOLI15",
+      "title": "R$ 15 OFF na Bella Napoli",
+      "description": "R$ 15 de desconto em pedidos acima de R$ 60 na Pizzaria Bella Napoli.",
+      "type": "fixed",
+      "value": 15,
+      "max_discount": null,
+      "min_order": 60,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-crocante",
+      "platform_id": "ifood",
+      "restaurant_id": "frango-crocante",
+      "code": "CROCANTE8",
+      "title": "R$ 8 OFF no Frango Crocante",
+      "description": "R$ 8 de desconto acima de R$ 40 no Frango Crocante Co.",
+      "type": "fixed",
+      "value": 8,
+      "max_discount": null,
+      "min_order": 40,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-volta20",
+      "platform_id": "ifood",
+      "restaurant_id": null,
+      "code": "VOLTA20",
+      "title": "R$ 20 OFF de volta às aulas",
+      "description": "Campanha encerrada (cupom expirado).",
+      "type": "fixed",
+      "value": 20,
+      "max_discount": null,
+      "min_order": 30,
+      "first_order_only": false,
+      "expires_at": "2026-09-30"
+    },
+    {
+      "id": "c-99frete",
+      "platform_id": "99food",
+      "restaurant_id": null,
+      "code": "99FRETE",
+      "title": "Entrega grátis acima de R$ 40",
+      "description": "Taxa de entrega zerada em pedidos acima de R$ 40.",
+      "type": "free_delivery",
+      "value": 0,
+      "max_discount": null,
+      "min_order": 40,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-99menos6",
+      "platform_id": "99food",
+      "restaurant_id": null,
+      "code": "99MENOS6",
+      "title": "R$ 6 OFF acima de R$ 50",
+      "description": "R$ 6 de desconto em pedidos acima de R$ 50.",
+      "type": "fixed",
+      "value": 6,
+      "max_discount": null,
+      "min_order": 50,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-bemvindo15",
+      "platform_id": "keeta",
+      "restaurant_id": null,
+      "code": "BEMVINDO15",
+      "title": "R$ 15 OFF no 1º pedido",
+      "description": "R$ 15 de desconto no seu primeiro pedido no Keeta, acima de R$ 50.",
+      "type": "fixed",
+      "value": 15,
+      "max_discount": null,
+      "min_order": 50,
+      "first_order_only": true,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-keeta10",
+      "platform_id": "keeta",
+      "restaurant_id": null,
+      "code": "KEETA10",
+      "title": "10% OFF acima de R$ 40",
+      "description": "10% de desconto (máx. R$ 8) em pedidos acima de R$ 40.",
+      "type": "percent",
+      "value": 10,
+      "max_discount": 8,
+      "min_order": 40,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-taco25",
+      "platform_id": "keeta",
+      "restaurant_id": "taco-loco",
+      "code": "TACO25",
+      "title": "25% OFF no Taco Loco",
+      "description": "25% de desconto (máx. R$ 12) acima de R$ 30 no Taco Loco.",
+      "type": "percent",
+      "value": 25,
+      "max_discount": 12,
+      "min_order": 30,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-rappi20",
+      "platform_id": "rappi",
+      "restaurant_id": null,
+      "code": "RAPPI20",
+      "title": "20% OFF acima de R$ 60",
+      "description": "20% de desconto (máx. R$ 20) em pedidos acima de R$ 60.",
+      "type": "percent",
+      "value": 20,
+      "max_discount": 20,
+      "min_order": 60,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-nonna10",
+      "platform_id": "rappi",
+      "restaurant_id": "cantina-nonna",
+      "code": "NONNA10",
+      "title": "R$ 10 OFF na Cantina da Nonna",
+      "description": "R$ 10 de desconto acima de R$ 45 na Cantina da Nonna.",
+      "type": "fixed",
+      "value": 10,
+      "max_discount": null,
+      "min_order": 45,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    },
+    {
+      "id": "c-aiqfrete",
+      "platform_id": "aiqfome",
+      "restaurant_id": null,
+      "code": "AIQFRETE",
+      "title": "Entrega grátis acima de R$ 50",
+      "description": "Taxa de entrega zerada em pedidos acima de R$ 50.",
+      "type": "free_delivery",
+      "value": 0,
+      "max_discount": null,
+      "min_order": 50,
+      "first_order_only": false,
+      "expires_at": "2026-12-31"
+    }
+  ]
+}
