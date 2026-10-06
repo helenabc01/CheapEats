@@ -12,6 +12,7 @@ import 'package:cheapeats_app/widgets/restaurant_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'test_helpers.dart';
 
@@ -41,6 +42,9 @@ void main() {
     GoogleFonts.config.allowRuntimeFetching = false;
     MapConfig.tilesEnabled = false;
     SupabaseConfig.forceOffline = true; // usa os dados locais, sem rede
+    // Onboarding já visto: o fluxo principal vai direto ao login
+    // (a primeira abertura é testada em parte1_test.dart).
+    SharedPreferences.setMockInitialValues({'onboarding_visto': true});
   });
 
   testWidgets('fluxo principal: splash → login → home → restaurante → comparar', (tester) async {

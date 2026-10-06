@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/app_services.dart';
 import '../core/routes/app_routes.dart';
 import '../ui/theme.dart';
+import 'onboarding_screen.dart';
 
 /// Abre o app: anima o logo enquanto inicia o Supabase e carrega o catálogo.
 class SplashScreen extends StatefulWidget {
@@ -36,13 +37,14 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   Future<void> _boot() async {
     final minimumTime = Future<void>.delayed(const Duration(milliseconds: 1800));
+    final onboardingSeen = OnboardingFlag.isSeen();
     await AppServices.initSupabase();
     await AppServices.loadCatalog();
     await minimumTime;
+    // Na primeira abertura, apresenta o app antes do login.
+    final next = await onboardingSeen ? AppRoutes.login : AppRoutes.onboarding;
     if (!mounted) return;
-    // TODO(PARTE-1): na primeira vez que o app abre, ir para AppRoutes.onboarding
-    // (guardar um "onboarding_visto" no shared_preferences) e só depois para o login.
-    Navigator.of(context).pushNamedAndRemoveUntil(AppRoutes.login, (_) => false);
+    Navigator.of(context).pushNamedAndRemoveUntil(next, (_) => false);
   }
 
   @override

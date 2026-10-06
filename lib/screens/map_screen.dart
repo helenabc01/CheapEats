@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong2/latlong.dart' show LatLng;
+import 'package:latlong2/latlong.dart' show Distance, LatLng, LengthUnit;
 
 import '../core/app_services.dart';
 import '../core/config/map_config.dart';
@@ -39,6 +39,27 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
   LatLng get _user {
     final address = AppServices.address.current;
     return LatLng(address.latitude, address.longitude);
+  }
+
+  /// Enquadramento inicial: o endereço do usuário no centro e os restaurantes
+  /// próximos visíveis (cada um ganha um "espelho" do outro lado do usuário,
+  /// assim o centro do enquadramento é o próprio endereço). Sem restaurantes
+  /// por perto, o mapa abre só no endereço.
+  CameraFit? get _initialFit {
+    const distance = Distance();
+    final user = _user;
+    final nearby = [
+      for (final r in AppServices.catalog.restaurants)
+        if (distance.as(LengthUnit.Kilometer, user, LatLng(r.latitude, r.longitude)) <= 3)
+          LatLng(r.latitude, r.longitude),
+    ];
+    if (nearby.isEmpty) return null;
+    return CameraFit.bounds(
+      bounds: LatLngBounds.fromPoints([
+        for (final p in nearby) ...[p, LatLng(2 * user.latitude - p.latitude, 2 * user.longitude - p.longitude)],
+      ]),
+      padding: const EdgeInsets.fromLTRB(40, 150, 40, 230),
+    );
   }
 
   /// Restaurantes do filtro atual, do mais perto ao mais longe.
@@ -110,7 +131,6 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
     final categories = FoodCategory.all
         .where((c) => AppServices.catalog.restaurants.any((r) => r.category == c.id))
         .toList();
-    final points = [_user, for (final r in AppServices.catalog.restaurants) LatLng(r.latitude, r.longitude)];
 
     return Scaffold(
       body: Stack(
@@ -120,10 +140,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
             options: MapOptions(
               initialCenter: _user,
               initialZoom: 14,
-              initialCameraFit: CameraFit.bounds(
-                bounds: LatLngBounds.fromPoints(points),
-                padding: const EdgeInsets.fromLTRB(40, 150, 40, 230),
-              ),
+              initialCameraFit: _initialFit,
               minZoom: 11,
               maxZoom: 18,
               backgroundColor: const Color(0xFFEDEAE6),
