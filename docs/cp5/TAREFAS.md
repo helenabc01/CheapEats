@@ -11,7 +11,7 @@ O protótipo já tem a **base completa** e o **fluxo principal funcionando**: Sp
 - [x] Regra de preço testada: `PriceCalculator` (itens + entrega + taxa − melhor cupom, pedido mínimo, empate, cupom de 1º pedido)
 - [x] Supabase: `schema.sql`, `seed.sql`, leitura do catálogo e modo offline automático
 - [x] Navegação com rotas nomeadas e as 4 abas (Início, Busca, Pedidos, Perfil)
-- [x] Telas: Splash, Login (com conta demo), Início, Busca, **Mapa interativo**, Restaurante e Comparação + redirecionamento para o app
+- [x] Telas: Splash, Login (com conta demo), Início, Busca, **Mapa interativo** (com prévia na Início e na Busca), Restaurante e Comparação + redirecionamento para o app
 - [x] Testes automatizados (`flutter test`) e análise sem avisos (`flutter analyze`)
 - [x] README com instruções, decisões técnicas e roteiro da demo
 
@@ -91,7 +91,7 @@ Por fim, troque o "⏳" da sua parte por "✅" na tabela de status do `README.md
 | `AppServices.favorites` | Favoritos (`isFavorite`, `toggle`, `ids`) |
 | `AppServices.orders` | Pedidos (`orders`, `register(...)`, `totalSavings`) |
 | `AppRoutes` | Nomes das rotas (`AppRoutes.login`, `.restaurant`, `.compare`, `.map`, `.coupons`…) |
-| `RestaurantCard`, `DishTile`, `PlatformBadge`, `SavingsBadge`, `PromoTag`, `FoodImage`, `RestaurantLogo`, `SectionHeader`, `QuantityStepper`, `DataSourceChip`, `CategoryTile` | Widgets prontos em `lib/widgets/` |
+| `RestaurantCard`, `DishTile`, `PlatformBadge`, `SavingsBadge`, `PromoTag`, `FoodImage`, `RestaurantLogo`, `SectionHeader`, `QuantityStepper`, `DataSourceChip`, `CategoryTile`, `MapPreviewCard` | Widgets prontos em `lib/widgets/` |
 | `Fmt` | Formatação: `brl`, `fee`, `percent`, `deliveryTime`, `distance` |
 
 > Para ver como usar, olhe as telas prontas: `home_screen.dart`, `map_screen.dart`, `restaurant_screen.dart` e `comparison_screen.dart`.

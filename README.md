@@ -26,7 +26,7 @@ Agregador que compara o preço, a taxa de entrega e os cupons do **mesmo prato**
 | --- | --- |
 | **Comparador** (preço do item + frete + taxa − cupom) | ✅ Tela de comparação com o total nos 5 apps, do mais barato ao mais caro: detalhamento, economia em R$ e %, quantidade, pedido mínimo e "faltam R$ X para usar o cupom" |
 | **Busca global** por prato ou restaurante | ✅ Busca sem acento, sinônimos, buscas populares/recentes, abas Pratos e Restaurantes · ⏳ filtros (Parte 2) |
-| **Mapa interativo** | ✅ Restaurantes próximos no mapa (OpenStreetMap), com a economia de cada um no pino, filtro por categoria e cards sincronizados com o mapa |
+| **Mapa interativo** | ✅ Restaurantes próximos no mapa (OpenStreetMap), com a economia de cada um no pino, filtro por categoria e cards sincronizados com o mapa. Aparece em destaque na Início ("Perto de você") e em miniatura na Busca |
 | **Deep link** para o app mais barato | ✅ Tela de redirecionamento, cupom para copiar e abertura do app escolhido |
 | **Localização integrada** | ✅ Endereço no topo da Home e centro do mapa · ⏳ tela de endereços (Parte 1) |
 | Login | ✅ Login simulado com validação, conta demo e "Explorar sem conta" |
@@ -206,7 +206,7 @@ Detalhes de cada parte, arquivos e critérios de aceite: **[docs/cp5/TAREFAS.md]
 
 1. **Splash → Login:** mostrar a validação, tocar em **Conta demo** e entrar.
 2. **Início:** endereço, categorias, o carrossel com um cupom de cada app e a vitrine **Economia do dia**.
-3. **Mapa:** restaurantes próximos com a economia no pino; filtrar por categoria e abrir um restaurante pelo card.
+3. **Mapa:** tocar no card "Perto de você" da Início; mostrar a economia no pino, filtrar por categoria e abrir um restaurante pelo card.
 4. **Busca "pizza":** o cardápio mais barato (99Food) **não** é o melhor total (iFood, com frete grátis + cupom). Essa é a proposta do app.
 5. **Restaurante:** condições em cada app (frete, tempo, mínimo), cupons e cardápio comparado.
 6. **Comparar:** mudar a quantidade, ver pedido mínimo, cupom aplicado e economia; **Pedir no app** abre o app vencedor.
