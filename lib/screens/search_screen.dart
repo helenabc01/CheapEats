@@ -11,6 +11,7 @@ import '../data/search_filters.dart';
 import '../ui/theme.dart';
 import '../widgets/category_tile.dart';
 import '../widgets/dish_tile.dart';
+import '../widgets/map_preview_card.dart';
 import '../widgets/restaurant_card.dart';
 import '../widgets/search_filters_sheet.dart';
 import '../widgets/section_header.dart';
@@ -206,12 +207,21 @@ class _Suggestions extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.only(bottom: 24),
       children: [
+        const SectionHeader(
+          title: 'Perto de você',
+          icon: Icons.near_me_rounded,
+          padding: EdgeInsets.fromLTRB(20, 8, 12, 10),
+        ),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: MapPreviewCard(compact: true),
+        ),
         if (recent.isNotEmpty) ...[
           SectionHeader(
             title: 'Buscas recentes',
             actionLabel: 'Limpar',
             onAction: onClearRecent,
-            padding: const EdgeInsets.fromLTRB(20, 12, 12, 8),
+            padding: const EdgeInsets.fromLTRB(20, 20, 12, 8),
           ),
           for (final term in recent)
             ListTile(
@@ -223,7 +233,7 @@ class _Suggestions extends StatelessWidget {
               onTap: () => onPick(term),
             ),
         ],
-        const SectionHeader(title: 'Buscas populares', padding: EdgeInsets.fromLTRB(20, 16, 12, 10)),
+        const SectionHeader(title: 'Buscas populares', padding: EdgeInsets.fromLTRB(20, 20, 12, 10)),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Wrap(

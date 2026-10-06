@@ -11,6 +11,7 @@ import '../ui/theme.dart';
 import '../widgets/category_tile.dart';
 import '../widgets/data_source_chip.dart';
 import '../widgets/deal_card.dart';
+import '../widgets/map_preview_card.dart';
 import '../widgets/restaurant_card.dart';
 import '../widgets/section_header.dart';
 import 'main_shell.dart';
@@ -81,6 +82,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 SliverPersistentHeader(pinned: true, delegate: _SearchBarDelegate(onTap: _openSearch)),
                 SliverToBoxAdapter(child: _Categories(onSelected: (c) => _openSearch(c.label))),
                 SliverToBoxAdapter(child: _PromoCarousel(onSearch: () => _openSearch())),
+                const SliverToBoxAdapter(
+                  child: SectionHeader(
+                    title: 'Perto de você',
+                    subtitle: 'Escolha o restaurante pelo mapa',
+                    icon: Icons.near_me_rounded,
+                    padding: EdgeInsets.fromLTRB(20, 18, 12, 10),
+                  ),
+                ),
+                const SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: MapPreviewCard(),
+                  ),
+                ),
                 const SliverToBoxAdapter(
                   child: SectionHeader(
                     title: 'Economia do dia',
@@ -439,61 +454,55 @@ class _PromoCarouselState extends State<_PromoCarousel> {
         children: [
           SizedBox(
             height: 148,
-            child: Stack(
-              children: [
-                PageView.builder(
-                  controller: _controller,
-                  itemCount: banners.length,
-                  padEnds: false,
-                  onPageChanged: (i) => setState(() => _page = i),
-                  itemBuilder: (context, i) => Padding(
-                    padding: EdgeInsets.only(left: i == 0 ? 20 : 6, right: 6),
-                    child: _Banner(data: banners[i]),
-                  ),
-                ),
-                if (_page > 0)
-                  Positioned(
-                    left: 6,
-                    top: 0,
-                    bottom: 0,
-                    child: Center(
-                      child: _ArrowButton(icon: Icons.chevron_left_rounded, tooltip: 'Anterior', onTap: () => _step(-1)),
-                    ),
-                  ),
-                if (_page < banners.length - 1)
-                  Positioned(
-                    right: 6,
-                    top: 0,
-                    bottom: 0,
-                    child: Center(
-                      child: _ArrowButton(icon: Icons.chevron_right_rounded, tooltip: 'Próximo', onTap: () => _step(1)),
-                    ),
-                  ),
-              ],
+            child: PageView.builder(
+              controller: _controller,
+              itemCount: banners.length,
+              padEnds: false,
+              onPageChanged: (i) => setState(() => _page = i),
+              itemBuilder: (context, i) => Padding(
+                padding: EdgeInsets.only(left: i == 0 ? 20 : 6, right: 6),
+                child: _Banner(data: banners[i]),
+              ),
             ),
           ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              for (var i = 0; i < banners.length; i++)
-                GestureDetector(
-                  onTap: () {
-                    _goTo(i);
-                    _restartAutoPlay();
-                  },
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 220),
-                    margin: const EdgeInsets.symmetric(horizontal: 3, vertical: 4),
-                    width: i == _page ? 18 : 6,
-                    height: 6,
-                    decoration: BoxDecoration(
-                      color: i == _page ? AppColors.orange : AppColors.strokeGrey,
-                      borderRadius: BorderRadius.circular(999),
+          const SizedBox(height: 8),
+          // Bolinhas à esquerda e setas à direita, fora dos banners
+          // (assim não cobrem o texto).
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 16, 0),
+            child: Row(
+              children: [
+                for (var i = 0; i < banners.length; i++)
+                  GestureDetector(
+                    onTap: () {
+                      _goTo(i);
+                      _restartAutoPlay();
+                    },
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 220),
+                      margin: const EdgeInsets.only(right: 6, top: 6, bottom: 6),
+                      width: i == _page ? 18 : 6,
+                      height: 6,
+                      decoration: BoxDecoration(
+                        color: i == _page ? AppColors.orange : AppColors.strokeGrey,
+                        borderRadius: BorderRadius.circular(999),
+                      ),
                     ),
                   ),
+                const Spacer(),
+                _ArrowButton(
+                  icon: Icons.chevron_left_rounded,
+                  tooltip: 'Anterior',
+                  onTap: _page > 0 ? () => _step(-1) : null,
                 ),
-            ],
+                const SizedBox(width: 8),
+                _ArrowButton(
+                  icon: Icons.chevron_right_rounded,
+                  tooltip: 'Próximo',
+                  onTap: _page < banners.length - 1 ? () => _step(1) : null,
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -501,27 +510,37 @@ class _PromoCarouselState extends State<_PromoCarousel> {
   }
 }
 
+/// Seta pequena do carrossel (desabilitada no primeiro/último banner).
 class _ArrowButton extends StatelessWidget {
   final IconData icon;
   final String tooltip;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   const _ArrowButton({required this.icon, required this.tooltip, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: AppColors.bgWhite.withValues(alpha: 0.92),
-      shape: const CircleBorder(),
-      elevation: 2,
-      shadowColor: Colors.black26,
-      child: IconButton(
-        tooltip: tooltip,
-        visualDensity: VisualDensity.compact,
-        iconSize: 22,
-        color: AppColors.textBlack,
-        onPressed: onTap,
-        icon: Icon(icon),
+    final enabled = onTap != null;
+    return Tooltip(
+      message: tooltip,
+      child: Material(
+        color: AppColors.bgWhite,
+        shape: CircleBorder(
+          side: BorderSide(color: enabled ? AppColors.strokeGrey : AppColors.strokeLight),
+        ),
+        child: InkWell(
+          customBorder: const CircleBorder(),
+          onTap: onTap,
+          child: SizedBox(
+            width: 32,
+            height: 32,
+            child: Icon(
+              icon,
+              size: 20,
+              color: enabled ? AppColors.textBlack : AppColors.textLightGray,
+            ),
+          ),
+        ),
       ),
     );
   }

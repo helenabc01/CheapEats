@@ -1,4 +1,5 @@
 import 'package:cheapeats_app/core/app_services.dart';
+import 'package:cheapeats_app/core/config/map_config.dart';
 import 'package:cheapeats_app/core/routes/app_routes.dart';
 import 'package:cheapeats_app/main.dart';
 import 'package:cheapeats_app/screens/map_screen.dart';
@@ -34,8 +35,10 @@ Future<void> scrollUntilBuilt(WidgetTester tester, Finder finder, {int maxTries 
 
 void main() {
   setUp(() {
-    // Testes não têm internet: as fontes caem no fallback do sistema.
+    // Testes não têm internet: as fontes caem no fallback do sistema
+    // e os mapas aparecem sem os blocos de fundo.
     GoogleFonts.config.allowRuntimeFetching = false;
+    MapConfig.tilesEnabled = false;
   });
 
   testWidgets('fluxo principal: splash → login → home → restaurante → comparar', (tester) async {
@@ -84,7 +87,7 @@ void main() {
     await tester.pumpWidget(MaterialApp(
       theme: AppTheme.lightTheme,
       onGenerateRoute: AppRoutes.onGenerateRoute,
-      home: const MapScreen(showTiles: false),
+      home: const MapScreen(),
     ));
     await tester.pump(const Duration(milliseconds: 300));
 

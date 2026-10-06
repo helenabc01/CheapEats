@@ -3,6 +3,7 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart' show LatLng;
 
 import '../core/app_services.dart';
+import '../core/config/map_config.dart';
 import '../core/routes/app_routes.dart';
 import '../core/utils/formatters.dart';
 import '../data/models/food_category.dart';
@@ -12,6 +13,7 @@ import '../widgets/food_image.dart';
 import '../widgets/platform_badge.dart';
 import '../widgets/restaurant_logo.dart';
 import '../widgets/savings_badge.dart';
+import '../widgets/soft_tile_layer.dart';
 
 /// Mapa interativo dos restaurantes próximos.
 ///
@@ -20,26 +22,13 @@ import '../widgets/savings_badge.dart';
 /// Mapa base: OpenStreetMap (sem chave de API), levemente dessaturado para
 /// os pinos se destacarem.
 class MapScreen extends StatefulWidget {
-  /// `false` nos testes automatizados (eles não têm internet para baixar o mapa).
-  final bool showTiles;
-
-  const MapScreen({super.key, this.showTiles = true});
+  const MapScreen({super.key});
 
   @override
   State<MapScreen> createState() => _MapScreenState();
 }
 
 class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
-  static const _tiles = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
-
-  /// Tira ~65% da saturação e clareia um pouco o mapa (estilo "light").
-  static const _softMap = ColorFilter.matrix(<double>[
-    0.4882, 0.4649, 0.0469, 0, 12, //
-    0.1382, 0.8149, 0.0469, 0, 12, //
-    0.1382, 0.4649, 0.3969, 0, 12, //
-    0, 0, 0, 1, 0, //
-  ]);
-
   final _map = MapController();
   final _cards = PageController(viewportFraction: 0.88);
   AnimationController? _moveAnimation;
@@ -143,16 +132,10 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
               ),
             ),
             children: [
-              if (widget.showTiles)
-                TileLayer(
-                  urlTemplate: _tiles,
-                  userAgentPackageName: 'br.com.fiap.cheapeats',
-                  maxNativeZoom: 19,
-                  tileBuilder: (context, tile, _) => ColorFiltered(colorFilter: _softMap, child: tile),
-                ),
+              const SoftTileLayer(),
               MarkerLayer(
                 markers: [
-                  Marker(point: _user, width: 34, height: 34, child: const _UserDot()),
+                  Marker(point: _user, width: 34, height: 34, child: const UserLocationDot()),
                   // O selecionado é desenhado por último, para ficar por cima dos outros.
                   for (final i in [
                     for (var j = 0; j < restaurants.length; j++)
@@ -190,7 +173,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
-                  '© colaboradores do OpenStreetMap',
+                  MapConfig.attribution,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppText.caption.copyWith(fontSize: 10, color: AppColors.textDarkGrey),
@@ -354,35 +337,6 @@ class _FilterChip extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-/// "Você está aqui".
-class _UserDot extends StatelessWidget {
-  const _UserDot();
-
-  @override
-  Widget build(BuildContext context) {
-    return Tooltip(
-      message: 'Seu endereço',
-      child: Container(
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: const Color(0xFF1E88E5).withValues(alpha: 0.18),
-        ),
-        alignment: Alignment.center,
-        child: Container(
-          width: 16,
-          height: 16,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: const Color(0xFF1E88E5),
-            border: Border.all(color: Colors.white, width: 3),
-            boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)],
           ),
         ),
       ),
