@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/coming_soon.dart';
+import '../core/app_services.dart';
+import '../core/routes/app_routes.dart';
+import '../ui/theme.dart';
+import '../widgets/restaurant_card.dart';
 
-/// TODO(PARTE-3): Tela de Favoritos (aberta pelo Perfil).
-///
-/// O que fazer (detalhes em docs/cp5/TAREFAS.md):
-///   1. Listar os restaurantes de `AppServices.favorites.ids` usando o
-///      `RestaurantCard` (já pronto em `lib/widgets/restaurant_card.dart`).
-///   2. Tocar no card abre o restaurante (`AppRoutes.restaurant`).
-///   3. Estado vazio bonito ("Toque no coração de um restaurante para salvar").
-///   4. Persistir os favoritos com `shared_preferences` dentro do
-///      `FavoritesController` (carregar ao abrir o app, salvar ao tocar no coração).
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({super.key});
 
@@ -18,10 +12,63 @@ class FavoritesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Favoritos')),
-      body: const ComingSoon(
-        icon: Icons.favorite_border_rounded,
-        title: 'Seus restaurantes favoritos',
-        description: 'Salve restaurantes no coração para comparar os preços deles rapidinho.',
+      body: ListenableBuilder(
+        listenable: AppServices.favorites,
+        builder: (context, _) {
+          final favoriteIds = AppServices.favorites.ids;
+          
+          if (favoriteIds.isEmpty) {
+            return Center(
+              child: Padding(
+                padding: const EdgeInsets.all(32.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.favorite_border_rounded,
+                      size: 64,
+                      color: AppColors.strokeGrey,
+                    ),
+                    const SizedBox(height: 24),
+                    Text(
+                      'Seus restaurantes favoritos',
+                      style: AppText.h4,
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 12),
+                    Text(
+                      'Toque no coração de um restaurante para salvar aqui.',
+                      style: AppText.body2.copyWith(color: AppColors.textDarkGrey),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            );
+          }
+
+          final restaurants = favoriteIds
+              .map((id) => AppServices.catalog.restaurantById(id))
+              .where((r) => r != null)
+              .map((r) => r!)
+              .toList();
+
+          return ListView.separated(
+            padding: const EdgeInsets.all(16),
+            itemCount: restaurants.length,
+            separatorBuilder: (context, index) => const SizedBox(height: 16),
+            itemBuilder: (context, index) {
+              final restaurant = restaurants[index];
+              return RestaurantCard(
+                restaurant: restaurant,
+                onTap: () => Navigator.of(context).pushNamed(
+                  AppRoutes.restaurant,
+                  arguments: restaurant,
+                ),
+              );
+            },
+          );
+        },
       ),
     );
   }

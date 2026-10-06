@@ -125,3 +125,19 @@ grant select on public.platforms, public.restaurants, public.restaurant_platform
 -- TODO(PARTE-3): tabela `orders` (histórico de pedidos) com política de INSERT
 -- e SELECT para o app. Ver docs/cp5/TAREFAS.md.
 -- -----------------------------------------------------------------------------
+create table if not exists public.orders (
+  id              uuid primary key default gen_random_uuid(),
+  device_id       text not null,
+  restaurant_id   text not null references public.restaurants(id),
+  restaurant_name text not null,
+  platform_id     text not null references public.platforms(id),
+  items_summary   text not null,
+  total           numeric(10,2) not null,
+  savings         numeric(10,2) not null default 0,
+  created_at      timestamptz not null default now()
+);
+
+alter table public.orders enable row level security;
+create policy "app registra pedidos" on public.orders for insert to anon, authenticated with check (true);
+create policy "app lê pedidos" on public.orders for select to anon, authenticated using (true);
+grant select, insert on public.orders to anon, authenticated;
