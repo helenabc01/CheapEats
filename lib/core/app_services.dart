@@ -7,6 +7,7 @@ import '../data/services/price_calculator.dart';
 import 'config/supabase_config.dart';
 import 'services/address_controller.dart';
 import 'services/favorites_controller.dart';
+import 'services/location_service.dart';
 import 'services/orders_controller.dart';
 import 'services/session_controller.dart';
 
@@ -28,6 +29,9 @@ class AppServices {
   static final address = AddressController();
   static final favorites = FavoritesController();
   static final orders = OrdersController(session);
+
+  /// Localização atual do aparelho (os testes trocam por uma versão simulada).
+  static LocationService location = DeviceLocationService();
 
   /// Texto enviado da Home para a aba Busca (ex.: tocar numa categoria).
   static final searchRequest = ValueNotifier<String?>(null);

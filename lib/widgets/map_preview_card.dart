@@ -18,6 +18,11 @@ class MapPreviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Redesenha quando o usuário troca o endereço de entrega.
+    return ListenableBuilder(listenable: AppServices.address, builder: (context, _) => _build(context));
+  }
+
+  Widget _build(BuildContext context) {
     final catalog = AppServices.catalog;
     final address = AppServices.address.current;
     final user = LatLng(address.latitude, address.longitude);
@@ -38,6 +43,8 @@ class MapPreviewCard extends StatelessWidget {
             // O mapa em si não recebe toques: a página continua rolando normalmente.
             IgnorePointer(
               child: FlutterMap(
+                // Chave pelas coordenadas: um endereço novo recria o mapa já centralizado nele.
+                key: ValueKey(user),
                 options: MapOptions(
                   initialCenter: user,
                   initialZoom: compact ? 13.0 : 13.5,

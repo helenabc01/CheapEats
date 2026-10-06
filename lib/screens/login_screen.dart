@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/app_services.dart';
 import '../core/routes/app_routes.dart';
 import '../core/services/session_controller.dart';
+import '../data/repositories/auth_repository.dart';
 import '../ui/theme.dart';
 import '../widgets/platform_badge.dart';
 
@@ -34,9 +35,15 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _loading = true);
-    await Future<void>.delayed(const Duration(milliseconds: 700)); // simula a chamada ao servidor
+    try {
+      await AppServices.session.signIn(email: _emailController.text, password: _passwordController.text);
+    } on AuthException catch (error) {
+      if (!mounted) return;
+      setState(() => _loading = false);
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(error.message)));
+      return;
+    }
     if (!mounted) return;
-    AppServices.session.login(email: _emailController.text);
     _goHome();
   }
 

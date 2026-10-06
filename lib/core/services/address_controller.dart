@@ -22,9 +22,7 @@ class DeliveryAddress {
 }
 
 /// Endereço de entrega selecionado (aparece no topo da Home e centraliza o mapa).
-///
-/// TODO(PARTE-1): criar a lista de endereços mock e a tela de seleção
-/// (`lib/screens/address_screen.dart`), chamando [select] ao escolher.
+/// A escolha é feita em `lib/screens/address_screen.dart` (endereços salvos ou GPS).
 class AddressController extends ChangeNotifier {
   static const defaultAddress = DeliveryAddress(
     label: 'FIAP Paulista',
