@@ -40,6 +40,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     final onboardingSeen = OnboardingFlag.isSeen();
     await AppServices.initSupabase();
     await AppServices.loadCatalog();
+    await AppServices.favorites.load();
+    await AppServices.orders.load();
     await minimumTime;
     // Na primeira abertura, apresenta o app antes do login.
     final next = await onboardingSeen ? AppRoutes.login : AppRoutes.onboarding;
