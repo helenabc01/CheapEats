@@ -1,5 +1,5 @@
 name: cheapeats_app
-description: "A new Flutter project."
+description: "CheapEats — compara o preço do mesmo prato no iFood, 99Food e Keeta."
 publish_to: "none"
 version: 1.0.0+1
 
@@ -9,7 +9,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   cupertino_icons: ^1.0.8
+  supabase_flutter: ^2.18.0 # banco de dados (catálogo e pedidos)
+  url_launcher: ^6.3.3 # abre o app de delivery escolhido
+  intl: ^0.20.3 # formatação em R$
+  google_fonts: ^9.0.0 # Poppins e Inter (design system do CP4)
+  shared_preferences: ^2.5.6 # dados locais (onboarding, favoritos)
+  flutter_map: ^8.3.2 # mapa interativo dos restaurantes (OpenStreetMap/CARTO)
+  latlong2: ^0.10.1 # coordenadas para o mapa
 
 dev_dependencies:
   flutter_test:
@@ -20,3 +29,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/imgs/
+    - assets/data/
