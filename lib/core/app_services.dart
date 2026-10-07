@@ -24,7 +24,6 @@ class AppServices {
   static Catalog? _catalog;
   static DataSource _dataSource = DataSource.local;
   static String? _fallbackReason;
-  static bool _supabaseStarted = false;
 
   static final session = SessionController();
   static final address = AddressController();
@@ -46,15 +45,22 @@ class AppServices {
   static PriceCalculator get calculator =>
       PriceCalculator(catalog: catalog, firstOrderPlatforms: session.firstOrderPlatforms);
 
-  /// Inicializa o Supabase (se houver URL e chave). Nunca lança erro:
-  /// se falhar, o app segue com os dados locais.
   static Future<void> initSupabase() async {
-    // Não usar `Supabase.instance` aqui: antes do initialize ele dispara um
-    // assert (modo debug) e a splash fica travada.
-    if (!SupabaseConfig.isConfigured || _supabaseStarted) return;
+    if (!SupabaseConfig.isConfigured) return;
     try {
-      await Supabase.initialize(url: SupabaseConfig.url, publishableKey: SupabaseConfig.publishableKey);
-      _supabaseStarted = true;
+      // In early versions of supabase_flutter, checking Supabase.instance before
+      // initialization throws a StateError. Try-catch it just in case.
+      try {
+        final _ = Supabase.instance.client;
+        return;
+      } catch (_) {
+        // Not initialized yet, proceed to initialize
+      }
+      
+      await Supabase.initialize(
+        url: SupabaseConfig.url, 
+        publishableKey: SupabaseConfig.publishableKey
+      ).timeout(const Duration(seconds: 8));
     } catch (error) {
       debugPrint('[CheapEats] Falha ao iniciar o Supabase: $error');
     }
