@@ -13,16 +13,18 @@ O protótipo já tem a **base completa** e o **fluxo principal funcionando**: Sp
 - [x] Navegação com rotas nomeadas e as 4 abas (Início, Busca, Pedidos, Perfil)
 - [x] Telas: Splash, Login (com conta demo), Início, Busca, **Mapa interativo** (com prévia na Início e na Busca), Restaurante e Comparação + redirecionamento para o app
 - [x] Testes automatizados (`flutter test`) e análise sem avisos (`flutter analyze`)
-- [x] README com instruções, decisões técnicas e roteiro da demo
+- [x] README com instruções e decisões técnicas
 
-## ⏳ O que falta
+## ✅ Partes do CP5
 
-| Parte | Responsável | Tema | Arquivos principais |
-| --- | --- | --- | --- |
-| [1](#parte-1--onboarding--endereço--perfil) | **Henrique** | Onboarding + Endereço + Perfil | `onboarding_screen.dart`, `address_screen.dart`, `profile_screen.dart`, `splash_screen.dart` |
-| [2](#parte-2--filtros-da-busca--cupons) | **Mateus** | Filtros da busca + Cupons | `search_filters.dart`, `search_filters_sheet.dart`, `coupons_screen.dart` |
-| [3](#parte-3--pedidos-no-supabase--favoritos) | **Helena** | Pedidos (Supabase) + Favoritos | `orders_screen.dart`, `orders_controller.dart`, `favorites_screen.dart`, `favorites_controller.dart`, `supabase/schema.sql` |
-| [Bônus](#bônus--sacola-comparativa) | quem terminar antes | Sacola comparativa (opcional) | `cart_controller.dart`, `cart_screen.dart` |
+As 3 partes foram concluídas e mescladas na `main`. Só o bônus (opcional) não foi feito.
+
+| Parte | Responsável | Tema | Arquivos principais | Status |
+| --- | --- | --- | --- | --- |
+| [1](#parte-1--onboarding--endereço--perfil) | **Henrique** | Onboarding + Endereço + Perfil | `onboarding_screen.dart`, `address_screen.dart`, `profile_screen.dart`, `splash_screen.dart` | ✅ |
+| [2](#parte-2--filtros-da-busca--cupons) | **Mateus** | Filtros da busca + Cupons | `search_filters.dart`, `search_filters_sheet.dart`, `coupons_screen.dart` | ✅ |
+| [3](#parte-3--pedidos-no-supabase--favoritos) | **Helena** | Pedidos (Supabase) + Favoritos | `orders_screen.dart`, `orders_controller.dart`, `favorites_screen.dart`, `favorites_controller.dart`, `supabase/schema.sql` | ✅ |
+| [Bônus](#bônus--sacola-comparativa) | quem terminar antes | Sacola comparativa (opcional) | `cart_controller.dart`, `cart_screen.dart` | ⏳ não feito |
 
 ---
 
@@ -143,11 +145,11 @@ Por fim, troque o "⏳" da sua parte por "✅" na tabela de status do `README.md
 
 ### Critérios de aceite
 
-- [ ] O onboarding aparece só na primeira vez (para testar de novo, use uma aba anônima do Chrome).
-- [ ] "Pular" e "Começar" levam ao login.
-- [ ] Ao escolher um endereço, o topo da Home muda na hora e o mapa abre centralizado nele.
-- [ ] O perfil mostra o nome de quem fez login (ou "Visitante") e "Sair" volta para o login.
-- [ ] Visual seguindo o tema (cores, fontes e espaçamentos das outras telas).
+- [x] O onboarding aparece só na primeira vez (para testar de novo, use uma aba anônima do Chrome).
+- [x] "Pular" e "Começar" levam ao login.
+- [x] Ao escolher um endereço, o topo da Home muda na hora e o mapa abre centralizado nele.
+- [x] O perfil mostra o nome de quem fez login (ou "Visitante") e "Sair" volta para o login.
+- [x] Visual seguindo o tema (cores, fontes e espaçamentos das outras telas).
 
 ---
 
@@ -181,13 +183,13 @@ Por fim, troque o "⏳" da sua parte por "✅" na tabela de status do `README.md
 
 ### Critérios de aceite
 
-- [ ] Buscar "pizza" e filtrar só o app "Keeta" esconde a Pizza de Rúcula, que não é vendida no Keeta.
-- [ ] Filtrar a categoria "Pizza" mostra só os pratos da Bella Napoli.
-- [ ] "Só entrega grátis" esconde os restaurantes sem frete grátis em algum app.
-- [ ] Ordenar por "Melhor avaliação" muda a ordem dos restaurantes.
-- [ ] "Limpar" volta aos filtros padrão e o contador do ícone some.
-- [ ] Cupons agrupados por app, copiar funciona e o cupom expirado (`VOLTA20`) aparece separado.
-- [ ] Os banners da Home ("Ver cupons") abrem a tela de cupons.
+- [x] Buscar "pizza" e filtrar só o app "Keeta" esconde a Pizza de Rúcula, que não é vendida no Keeta.
+- [x] Filtrar a categoria "Pizza" mostra só os pratos da Bella Napoli.
+- [x] "Só entrega grátis" esconde os restaurantes sem frete grátis em algum app.
+- [x] Ordenar por "Melhor avaliação" muda a ordem dos restaurantes.
+- [x] "Limpar" volta aos filtros padrão e o contador do ícone some.
+- [x] Cupons agrupados por app, copiar funciona e o cupom expirado (`VOLTA20`) aparece separado.
+- [x] Os banners da Home ("Ver cupons") abrem a tela de cupons.
 
 ---
 
@@ -258,11 +260,11 @@ Por fim, troque o "⏳" da sua parte por "✅" na tabela de status do `README.md
 
 ### Critérios de aceite
 
-- [ ] Fazer um pedido pelo comparador faz ele aparecer na aba Pedidos na hora.
-- [ ] O pedido aparece na tabela `orders` do Supabase (mostre o *Table Editor* na apresentação!).
-- [ ] Sem internet, o app não quebra: o pedido fica só na lista local.
-- [ ] Depois de pedir no Keeta, o cupom de 1º pedido do Keeta (`BEMVINDO15`) deixa de ser aplicado (isso já acontece e vale mostrar na demo).
-- [ ] Favoritar no restaurante faz ele aparecer em Favoritos, e os favoritos continuam lá depois de recarregar a página (F5).
+- [x] Fazer um pedido pelo comparador faz ele aparecer na aba Pedidos na hora.
+- [x] O pedido aparece na tabela `orders` do Supabase (mostre o *Table Editor* na apresentação!).
+- [x] Sem internet, o app não quebra: o pedido fica só na lista local.
+- [x] Depois de pedir no Keeta, o cupom de 1º pedido do Keeta (`BEMVINDO15`) deixa de ser aplicado (isso já acontece e vale mostrar na demo).
+- [x] Favoritar no restaurante faz ele aparecer em Favoritos, e os favoritos continuam lá depois de recarregar a página (F5).
 
 ---
 
@@ -282,5 +284,4 @@ Opcional, para quem terminar antes. Hoje o comparador compara **um prato** (com 
 - [ ] `flutter analyze` sem problemas e `flutter test` passando na `main`
 - [ ] `flutter run -d chrome` testado no computador da apresentação (com internet para o mapa e as fotos)
 - [ ] Selo **Dados: Supabase** aparecendo (e o modo offline testado)
-- [ ] Tabela de status do README atualizada
-- [ ] Ensaiar o roteiro da demo (README → "Roteiro da demonstração")
+- [x] Tabela de status do README atualizada

@@ -122,8 +122,8 @@ grant select on public.platforms, public.restaurants, public.restaurant_platform
   to anon, authenticated;
 
 -- -----------------------------------------------------------------------------
--- TODO(PARTE-3): tabela `orders` (histórico de pedidos) com política de INSERT
--- e SELECT para o app. Ver docs/cp5/TAREFAS.md.
+-- Pedidos (histórico "Meus pedidos"): o app registra (INSERT) e lê (SELECT)
+-- os pedidos do próprio aparelho (`device_id`).
 -- -----------------------------------------------------------------------------
 create table if not exists public.orders (
   id              uuid primary key default gen_random_uuid(),

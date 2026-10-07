@@ -3,18 +3,31 @@
 **O faro fino do delivery.**
 Agregador que compara o preço, a taxa de entrega e os cupons do **mesmo prato** no **iFood, 99Food, Keeta, Rappi e Aiqfome** e mostra onde ele sai mais barato.
 
-> **Checkpoint 5 — Protótipo funcional.** App em Flutter com telas navegáveis, dados simulados realistas, mapa interativo, banco Supabase (com modo offline) e execução no Chrome ou no emulador Android.
+> **Checkpoint 5 — Protótipo funcional.** App em Flutter com telas navegáveis, dados simulados realistas, mapa interativo, banco Supabase (leitura do catálogo e gravação dos pedidos, com modo offline) e execução no Chrome, no Windows ou no emulador Android.
 
 | Login | Início | Mapa | Restaurante | Comparação | Filtros | Cupons |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | ![Login](docs/prints/01-login.jpg) | ![Início](docs/prints/02-home.jpg) | ![Mapa](docs/prints/05-mapa.jpg) | ![Restaurante](docs/prints/03-restaurante.jpg) | ![Comparação](docs/prints/04-comparacao.jpg) | ![Filtros](docs/prints/06-filtros.jpg) | ![Cupons](docs/prints/07-cupons.jpg) |
 
+## 🎬 Vídeo de demonstração
+
+<p align="center">
+  <img src="docs/demo/cheapeats-demo.gif" alt="Demonstração do CheapEats: onboarding, login, busca com filtros, comparação de preços, pedido salvo no Supabase e cupons" width="300">
+</p>
+
+Fluxo completo em 2 minutos: onboarding → login com a conta demo → Início → mapa → busca "pizza" com filtros (preço máximo de R$ 40 + menor preço, e "Limpar") → comparação nos 5 apps → **Pedir no iFood** → pedido salvo em "Meus pedidos" (e no Supabase) → casos especiais: restaurante fechado (Sushi Kenzo), restaurante em um app só (Ateliê Doce Brigadeiro), empate (Padaria Estrela da Vila) e Aiqfome vencendo na comida caseira (Tia Lu) → Perfil → Cupons.
+
+▶️ **[Assistir no YouTube](https://youtube.com/shorts/s9AYluWqLTY)**
+
 ## 👥 Integrantes do Grupo
-*  Helena Barbosa Costa 562450
-*  Henrique Mandrick  562715
-*  Mateus Scandiuzzi Valente Tomomitsu 561565
-*  Ryan Amorim de Castro Santana 564393
-*  Thomas Joh Kobayashi 562758
+
+| Integrante | RM | Papel no CP5 |
+| --- | --- | --- |
+| Helena Barbosa Costa | 562450 | **Pedidos no Supabase + Favoritos:** tabela `orders`, histórico "Meus pedidos" com o total economizado e favoritos salvos no aparelho |
+| Henrique Mandrick | 562715 | **Onboarding + Endereço + Perfil:** apresentação na primeira abertura, endereço de entrega com localização atual (GPS) e área do usuário |
+| Mateus Scandiuzzi Valente Tomomitsu | 561565 | **Filtros da busca + Cupons:** filtros e ordenação da busca, tela de cupons por app, revisão da entrega e vídeo de demonstração |
+| Ryan Amorim de Castro Santana | 564393 | **Base do app:** dados simulados, regra de preço, integração com o Supabase, Login, Início, Busca, Mapa, Restaurante, Comparação, testes e documentação |
+| Thomas Joh Kobayashi | 562758 | |
 
 ## 🎯 O Problema e Público-Alvo
 *   **Problema:** a alta variação de preços (até 30%) de um mesmo prato, por causa de taxas de entrega dinâmicas e cupons espalhados em vários aplicativos, gera desgaste e perda de tempo na pesquisa manual.
@@ -28,31 +41,33 @@ Agregador que compara o preço, a taxa de entrega e os cupons do **mesmo prato**
 | **Busca global** por prato ou restaurante | ✅ Busca sem acento, sinônimos, buscas populares/recentes, abas Pratos e Restaurantes, filtros (categoria, app, só entrega grátis, preço máximo) e ordenação (menor preço, entrega mais rápida, melhor avaliação) |
 | **Mapa interativo** | ✅ Restaurantes próximos no mapa (OpenStreetMap), com a economia de cada um no pino, filtro por categoria e cards sincronizados com o mapa. Aparece em destaque na Início ("Perto de você") e em miniatura na Busca |
 | **Deep link** para o app mais barato | ✅ Tela de redirecionamento, cupom para copiar e abertura do app escolhido |
-| **Localização integrada** | ✅ Endereço no topo da Home e centro do mapa · ⏳ tela de endereços (Parte 1) |
+| **Localização integrada** | ✅ Endereço no topo da Home e centro do mapa; tela de endereços com busca, endereços salvos e "Usar minha localização atual" (GPS do aparelho/navegador + nome da rua pelo OpenStreetMap) |
 | Login | ✅ Login simulado com validação, conta demo e "Explorar sem conta" |
+| Onboarding | ✅ Apresentação do app só na primeira abertura, com "Pular" e "Começar" |
 | Cupons | ✅ Todos os cupons dos 5 apps agrupados por app, com filtro, regras (pedido mínimo, teto, 1º pedido, restaurante exclusivo), validade, "copiar código" e os expirados separados |
-| Pedidos, perfil, favoritos | ⏳ Partes 1 e 3 (ver [divisão de tarefas](docs/cp5/TAREFAS.md)) |
+| Pedidos | ✅ Cada pedido feito pelo comparador é **gravado no Supabase** (tabela `orders`) e aparece em "Meus pedidos" com a economia e o botão "Pedir de novo". Sem internet, o pedido fica na lista local |
+| Perfil e favoritos | ✅ Perfil com o card "Minha economia", atalhos e "Sair"; favoritos salvos no aparelho (continuam depois de recarregar a página) |
 
 ### Fluxo de telas
 
 ```mermaid
 flowchart LR
-    S[Splash] --> O[Onboarding*] --> L[Login]
+    S[Splash] --> O[Onboarding] --> L[Login]
     S --> L
     L --> H[Início]
     H <--> B[Busca]
-    H <--> P[Pedidos*]
-    H <--> U[Perfil*]
+    H <--> P[Pedidos]
+    H <--> U[Perfil]
     H --> M[Mapa] --> R
     H --> R[Restaurante] --> C[Comparar preços] --> D([App de delivery])
     B --> C
     B --> R
-    H --> E[Endereço*]
-    H --> K[Cupons*]
-    U --> F[Favoritos*]
+    H --> E[Endereço]
+    H --> K[Cupons]
+    U --> F[Favoritos]
 ```
 
-`*` telas em desenvolvimento pela equipe no CP5 (já têm rota e tela provisória, então a navegação nunca quebra).
+O onboarding aparece só na primeira abertura; depois a splash vai direto para o login.
 
 ## ▶️ Como rodar
 
@@ -70,6 +85,13 @@ flutter run -d chrome
 * **Sem internet ou sem o banco:** o app usa automaticamente os dados locais (o mapa e as fotos precisam de internet; sem ela aparecem ícones no lugar). Para forçar o modo offline:
   `flutter run -d chrome --dart-define=SUPABASE_URL=`
 * **No VS Code:** aba *Executar e depurar* → escolha uma das configurações de `.vscode/launch.json`.
+* **Sem o Google Chrome:** dá para usar o Edge (`flutter run -d edge`) ou abrir em qualquer navegador com `flutter run -d web-server --web-port 8080` e acessar `http://localhost:8080`.
+
+### Windows (Flutter desktop)
+
+1. Instale o **Visual Studio** com a carga de trabalho *Desenvolvimento para desktop com C++* (confira com `flutter doctor`).
+2. **Ative o Modo de Desenvolvedor do Windows** (*Configurações → Sistema → Para desenvolvedores*, ou `start ms-settings:developers`). Sem ele, a build para com o erro *"Building with plugins requires symlink support"*, porque os plugins do app (Supabase, mapa, localização) precisam de links simbólicos.
+3. `flutter run -d windows`
 
 ### Emulador Android (Android Studio)
 
@@ -82,7 +104,7 @@ flutter run -d chrome
 
 ```bash
 flutter analyze   # análise estática (0 problemas)
-flutter test      # testes da regra de preço, dos dados, do fluxo principal e do mapa
+flutter test      # regra de preço, dados, fluxo principal, mapa, onboarding, endereço e perfil
 ```
 
 ## 🗄️ Banco de dados (Supabase)
@@ -91,7 +113,8 @@ O catálogo (apps, restaurantes, pratos, preços e cupons) fica no **Supabase**.
 
 1. inicializa o Supabase com a *publishable key* (`lib/core/config/supabase_config.dart`);
 2. lê as 6 tabelas em paralelo (`SupabaseCatalogRepository`);
-3. se der erro ou demorar mais de 6 s, **usa os dados locais** (`MockCatalogRepository`). O selo "Dados: Supabase / locais" no fim da Home mostra a fonte usada.
+3. se der erro ou demorar mais de 6 s, **usa os dados locais** (`MockCatalogRepository`). O selo "Dados: Supabase / locais" no fim da Home mostra a fonte usada;
+4. carrega o histórico de pedidos do aparelho (tabela `orders`, filtrada por um `device_id` salvo no aparelho). Cada pedido feito pelo comparador é **gravado** nessa tabela.
 
 ```mermaid
 erDiagram
@@ -102,9 +125,11 @@ erDiagram
     platforms ||--o{ dish_prices : "em"
     platforms ||--o{ coupons : "oferece"
     restaurants |o--o{ coupons : "exclusivo de"
+    restaurants ||--o{ orders : "recebe"
+    platforms ||--o{ orders : "pedido em"
 ```
 
-O banco do grupo já está no ar (`https://vafmfwnszuvwyejgnqsm.supabase.co`) com todos os dados: 5 apps, 13 restaurantes, 71 pratos, 264 preços e 12 cupons. Para ter acesso ao painel, peça um convite ao Ryan.
+O banco do grupo já está no ar (`https://vafmfwnszuvwyejgnqsm.supabase.co`) com todos os dados: 5 apps, 13 restaurantes, 71 pratos, 264 preços e 12 cupons, além da tabela `orders` com os pedidos feitos pelo app. Para ter acesso ao painel, peça um convite ao Ryan.
 
 **Recriar o banco** em um projeto Supabase novo: *SQL Editor* → rode `supabase/schema.sql` e depois `supabase/seed.sql`. Em seguida, troque a URL e a chave em `lib/core/config/supabase_config.dart`.
 Se mudar os dados, edite `assets/data/cheapeats_mock.json` e gere o seed de novo:
@@ -113,7 +138,7 @@ Se mudar os dados, edite `assets/data/cheapeats_mock.json` e gere o seed de novo
 dart run tool/gerar_seed_sql.dart
 ```
 
-**Segurança:** a chave no app é a *publishable/anon key*, feita para ficar no cliente. As políticas de RLS deixam o catálogo **somente leitura**; a `service_role` nunca vai para o código.
+**Segurança:** a chave no app é a *publishable/anon key*, feita para ficar no cliente. As políticas de RLS deixam o catálogo **somente leitura** e, na tabela `orders`, o app só pode inserir e ler pedidos; a `service_role` nunca vai para o código.
 
 ## 🧪 Dados simulados
 
@@ -199,19 +224,8 @@ test/                             # testes automatizados
 | Parte | Responsável | Status |
 | --- | --- | --- |
 | Base, dados simulados (5 apps), regra de preço, Supabase, Login, Início, Busca, Mapa, Restaurante, Comparação, testes e documentação | Ryan | ✅ concluído |
-| Parte 1 — Onboarding + Endereço + Perfil | Henrique | ⏳ |
+| Parte 1 — Onboarding + Endereço + Perfil | Henrique | ✅ concluído |
 | Parte 2 — Filtros da busca + Cupons | Mateus | ✅ concluído |
-| Parte 3 — Pedidos (Supabase) + Favoritos | Helena | ⏳ |
+| Parte 3 — Pedidos (Supabase) + Favoritos | Helena | ✅ concluído |
 
 Detalhes de cada parte, arquivos e critérios de aceite: **[docs/cp5/TAREFAS.md](docs/cp5/TAREFAS.md)**.
-
-## 🎤 Roteiro da demonstração (≈ 3 min)
-
-1. **Splash → Login:** mostrar a validação, tocar em **Conta demo** e entrar.
-2. **Início:** endereço, categorias, o carrossel com um cupom de cada app (**Ver cupons** abre todos os cupons por app, com "copiar código") e a vitrine **Economia do dia**.
-3. **Mapa:** tocar no card "Perto de você" da Início; mostrar a economia no pino, filtrar por categoria e abrir um restaurante pelo card.
-4. **Busca "pizza":** o cardápio mais barato (99Food) **não** é o melhor total (iFood, com frete grátis + cupom). Essa é a proposta do app. Nos **filtros**, ordenar por menor preço ou deixar só o Keeta (a Pizza de Rúcula some, porque não é vendida lá).
-5. **Restaurante:** condições em cada app (frete, tempo, mínimo), cupons e cardápio comparado.
-6. **Comparar:** mudar a quantidade, ver pedido mínimo, cupom aplicado e economia; **Pedir no app** abre o app vencedor.
-7. **Casos especiais:** restaurante fechado (Sushi Kenzo), restaurante em um app só (Ateliê Doce Brigadeiro), empate (Padaria) e Aiqfome vencendo na comida caseira (Tia Lu).
-8. Fechar mostrando o selo **Dados: Supabase** e o painel do Supabase com as tabelas.
