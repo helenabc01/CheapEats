@@ -428,7 +428,7 @@ class _RedirectSheet extends StatelessWidget {
     // Abre o app ANTES de qualquer outra espera: no navegador, o pop-up só é
     // liberado se vier logo depois do clique.
     final opened = DeepLinkService.openPlatform(quote.platform);
-    // TODO(PARTE-3): o OrdersController deve salvar este pedido no Supabase.
+    // O OrdersController salva o pedido no Supabase (tabela `orders`).
     await AppServices.orders.register(
       restaurant: restaurant,
       items: items,

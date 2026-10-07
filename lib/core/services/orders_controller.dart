@@ -69,6 +69,10 @@ class OrdersController extends ChangeNotifier {
 
   double get totalSavings => _orders.fold(0, (sum, o) => sum + o.savings);
 
+  /// Os testes começam sem pedidos (a splash de outro teste carrega os de exemplo).
+  @visibleForTesting
+  void clearForTest() => _orders.clear();
+
   Future<String> _getDeviceId() async {
     if (_deviceId != null) return _deviceId!;
     final prefs = await SharedPreferences.getInstance();

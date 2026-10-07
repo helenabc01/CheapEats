@@ -168,6 +168,9 @@ void main() {
   });
 
   group('perfil', () {
+    // A splash dos testes anteriores carrega os pedidos de exemplo; aqui o perfil começa sem pedidos.
+    setUp(AppServices.orders.clearForTest);
+
     Future<void> pumpProfile(WidgetTester tester) {
       tester.view.physicalSize = const Size(412 * 3, 915 * 3);
       tester.view.devicePixelRatio = 3;
