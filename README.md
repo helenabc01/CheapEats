@@ -5,9 +5,9 @@ Agregador que compara o preço, a taxa de entrega e os cupons do **mesmo prato**
 
 > **Checkpoint 5 — Protótipo funcional.** App em Flutter com telas navegáveis, dados simulados realistas, mapa interativo, banco Supabase (com modo offline) e execução no Chrome ou no emulador Android.
 
-| Login | Início | Mapa | Restaurante | Comparação |
-| :---: | :---: | :---: | :---: | :---: |
-| ![Login](docs/prints/01-login.jpg) | ![Início](docs/prints/02-home.jpg) | ![Mapa](docs/prints/05-mapa.jpg) | ![Restaurante](docs/prints/03-restaurante.jpg) | ![Comparação](docs/prints/04-comparacao.jpg) |
+| Login | Início | Mapa | Restaurante | Comparação | Filtros | Cupons |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ![Login](docs/prints/01-login.jpg) | ![Início](docs/prints/02-home.jpg) | ![Mapa](docs/prints/05-mapa.jpg) | ![Restaurante](docs/prints/03-restaurante.jpg) | ![Comparação](docs/prints/04-comparacao.jpg) | ![Filtros](docs/prints/06-filtros.jpg) | ![Cupons](docs/prints/07-cupons.jpg) |
 
 ## 👥 Integrantes do Grupo
 *  Helena Barbosa Costa 562450
@@ -25,12 +25,13 @@ Agregador que compara o preço, a taxa de entrega e os cupons do **mesmo prato**
 | Funcionalidade (MVP) | Como está no CP5 |
 | --- | --- |
 | **Comparador** (preço do item + frete + taxa − cupom) | ✅ Tela de comparação com o total nos 5 apps, do mais barato ao mais caro: detalhamento, economia em R$ e %, quantidade, pedido mínimo e "faltam R$ X para usar o cupom" |
-| **Busca global** por prato ou restaurante | ✅ Busca sem acento, sinônimos, buscas populares/recentes, abas Pratos e Restaurantes · ⏳ filtros (Parte 2) |
+| **Busca global** por prato ou restaurante | ✅ Busca sem acento, sinônimos, buscas populares/recentes, abas Pratos e Restaurantes, filtros (categoria, app, só entrega grátis, preço máximo) e ordenação (menor preço, entrega mais rápida, melhor avaliação) |
 | **Mapa interativo** | ✅ Restaurantes próximos no mapa (OpenStreetMap), com a economia de cada um no pino, filtro por categoria e cards sincronizados com o mapa. Aparece em destaque na Início ("Perto de você") e em miniatura na Busca |
 | **Deep link** para o app mais barato | ✅ Tela de redirecionamento, cupom para copiar e abertura do app escolhido |
 | **Localização integrada** | ✅ Endereço no topo da Home e centro do mapa · ⏳ tela de endereços (Parte 1) |
 | Login | ✅ Login simulado com validação, conta demo e "Explorar sem conta" |
-| Pedidos, perfil, favoritos, cupons | ⏳ Partes 1, 2 e 3 (ver [divisão de tarefas](docs/cp5/TAREFAS.md)) |
+| Cupons | ✅ Todos os cupons dos 5 apps agrupados por app, com filtro, regras (pedido mínimo, teto, 1º pedido, restaurante exclusivo), validade, "copiar código" e os expirados separados |
+| Pedidos, perfil, favoritos | ⏳ Partes 1 e 3 (ver [divisão de tarefas](docs/cp5/TAREFAS.md)) |
 
 ### Fluxo de telas
 
@@ -199,7 +200,7 @@ test/                             # testes automatizados
 | --- | --- | --- |
 | Base, dados simulados (5 apps), regra de preço, Supabase, Login, Início, Busca, Mapa, Restaurante, Comparação, testes e documentação | Ryan | ✅ concluído |
 | Parte 1 — Onboarding + Endereço + Perfil | Henrique | ⏳ |
-| Parte 2 — Filtros da busca + Cupons | Mateus | ⏳ |
+| Parte 2 — Filtros da busca + Cupons | Mateus | ✅ concluído |
 | Parte 3 — Pedidos (Supabase) + Favoritos | Helena | ⏳ |
 
 Detalhes de cada parte, arquivos e critérios de aceite: **[docs/cp5/TAREFAS.md](docs/cp5/TAREFAS.md)**.
@@ -207,9 +208,9 @@ Detalhes de cada parte, arquivos e critérios de aceite: **[docs/cp5/TAREFAS.md]
 ## 🎤 Roteiro da demonstração (≈ 3 min)
 
 1. **Splash → Login:** mostrar a validação, tocar em **Conta demo** e entrar.
-2. **Início:** endereço, categorias, o carrossel com um cupom de cada app e a vitrine **Economia do dia**.
+2. **Início:** endereço, categorias, o carrossel com um cupom de cada app (**Ver cupons** abre todos os cupons por app, com "copiar código") e a vitrine **Economia do dia**.
 3. **Mapa:** tocar no card "Perto de você" da Início; mostrar a economia no pino, filtrar por categoria e abrir um restaurante pelo card.
-4. **Busca "pizza":** o cardápio mais barato (99Food) **não** é o melhor total (iFood, com frete grátis + cupom). Essa é a proposta do app.
+4. **Busca "pizza":** o cardápio mais barato (99Food) **não** é o melhor total (iFood, com frete grátis + cupom). Essa é a proposta do app. Nos **filtros**, ordenar por menor preço ou deixar só o Keeta (a Pizza de Rúcula some, porque não é vendida lá).
 5. **Restaurante:** condições em cada app (frete, tempo, mínimo), cupons e cardápio comparado.
 6. **Comparar:** mudar a quantidade, ver pedido mínimo, cupom aplicado e economia; **Pedir no app** abre o app vencedor.
 7. **Casos especiais:** restaurante fechado (Sushi Kenzo), restaurante em um app só (Ateliê Doce Brigadeiro), empate (Padaria) e Aiqfome vencendo na comida caseira (Tia Lu).
